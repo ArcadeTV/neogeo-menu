@@ -9,6 +9,8 @@
 ._*
 
 # Repository
+*.bak
 /_archive/*
 /tmp
 /MAME/hash/neogeo.xml
+/MAME/roms/menu/menu-p1.bin
