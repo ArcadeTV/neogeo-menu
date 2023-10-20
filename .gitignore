@@ -1,0 +1,14 @@
+# ignore
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Repository
+/_archive/*
+/tmp
+/MAME/hash/neogeo.xml
