@@ -41,6 +41,19 @@ Although this was made to be used on real hardware, you can run it in MAME:
 
 ---
 
+## How to Play
+
+|    Control | Function                     |
+| ---------: | :--------------------------- |
+|         Up | former list index            |
+|       Down | next list index              |
+|       Left | previous page                |
+|      Right | next page                    |
+|          D | toggle game infos            |
+| A or Start | launch (not yet implemented) |
+
+---
+
 ## Gamelist
 
 The list-entries in the rom come from `gamelist.asm`. 
