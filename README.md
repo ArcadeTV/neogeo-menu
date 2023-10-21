@@ -17,10 +17,21 @@ This aims to be an alternative menu for the chinese 161in1 multicart that was fu
 - [ ] Automated gamelist processing
 - [ ] Test on real hardware
 
+---
+
 ## Building
 
 On Windows use the `build.bat` file to start the toolchain.
 When everything works as expected you'll find the `menu-p1.bin` romfile in the `MAME\roms\menu` folder.
+
+Although this was made to be used on real hardware, you can run in im MAME:
+
+1. Run `build.bat`
+2. Open `MAME\hash\neogeo.xml` from this repository in any text editor and copy the element `<software name="menu">` till `</software>` into the `neogeo.xml` from your MAME folder.
+3. copy `MAME\roms\menu` (where the roms are located) to your MAME setup.
+4. Open a commandline terminal in your MAME folder and run MAME like this: `mame.exe neogeo -cart1 menu` or `mame.exe neogeo -cart1 menu -debug` if you want debugging features.
+
+---
 
 ## Gamelist
 
