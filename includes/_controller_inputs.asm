@@ -19,10 +19,14 @@ readControllerInputs:
     nop                                     ; C pressed
 
 .noc:
-    btst.b  #CNT_D,p1_Repeat
+    btst.b  #CNT_D,p1_Current
     beq     .nod
     nop                                     ; D pressed
-
+    move.b  RAM_ListMode,d0
+    not.b   d0                              ; toggle 0 and 1 by inverting the byte
+    move.b  d0,RAM_ListMode
+    jsr     updateList
+    
 .nod:
     btst.b  #CNT_UP,p1_Repeat
     beq     .noup

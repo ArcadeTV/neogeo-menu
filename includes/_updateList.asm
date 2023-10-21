@@ -139,20 +139,40 @@ updateGameInfo:
     add.w   d0,d0
     move.l  #POS_GAME_INFO,d6               ; initial start-to-write position in fix map
 
+    clr.l   d1
+    move.b  RAM_ListMode,d1
+    tst.b   d1
+    bne.w   .showGameCategories
+    
+    ; show GameInfos
     tst.b   BIOS_COUNTRY_CODE               ; test if register is 0 (Japan region)
-    beq.w   .loadJapTable                    ; if it is, branch to load the jap titles Table
+    beq.w   .loadJapTable                   ; if it is, branch to load the jap titles Table
     lea     GameInfosTable,a0               ; Load the text's table address in A0
     bra.s   .loadUsaTable
 .loadJapTable:
     lea     GameInfosTable_j,a0             ; Load the text's address in A0
 .loadUsaTable:
+    move.w  #$007B,d1                       ; put copyright-sign tile in d1 for writing 1st letter in letter in line
+    bra.w   .listMode_was_checked
 
+.showGameCategories:
+    ; show Game Categories
+    move.w  #$0020,d1                       ; put blank tile in d1 for writing 1st letter in letter in line
+    tst.b   BIOS_COUNTRY_CODE               ; test if register is 0 (Japan region)
+    beq.w   .loadJapCategoriesTable         ; if it is, branch to load the jap titles Table
+    lea     CategoriesTable,a0              ; Load the text's table address in A0
+    bra.s   .loadUsaCategoriesTable
+.loadJapCategoriesTable:
+    lea     CategoriesTable_j,a0            ; Load the text's address in A0
+.loadUsaCategoriesTable:
+
+.listMode_was_checked:
     movea.l (a0,d0),a0
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
     move.w  #$0000,d0                       ; tiles from address $0 in S ROM
     nop
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
-    move.w  #$007B,REG_VRAMRW               ; write copyright sign
+    move.w  d1,REG_VRAMRW                   ; write copyright sign or blank, depending on ListMode
     move.w  #$0020,REG_VRAMRW               ; write space
 .writeStr_Info:
     move.b  (a0)+,d0                        ; Load D0's lower byte

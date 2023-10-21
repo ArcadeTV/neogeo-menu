@@ -691,13 +691,13 @@ GameInfo_092:
 GameInfo_093:
     dc.b    "1991 SNK",0
 GameInfo_094:
-    dc.b    "1995 Saurus ",0
+    dc.b    "1995 Saurus",0
 GameInfo_095:
     dc.b    "1992 SNK",0
 GameInfo_096:
     dc.b    "2002 Evoga",0
 GameInfo_097:
-    dc.b    "1996 Saurus ",0
+    dc.b    "1996 Saurus",0
 GameInfo_098:
     dc.b    "1995 SNK",0
 GameInfo_099:
@@ -993,6 +993,499 @@ GameInfosTable:
     dc.l    GameInfo_160
     dc.l    GameInfo_161
 GameInfosTable_End:
+
+    even
+
+Categories:
+Category_001:
+    dc.b    "Test",0
+Category_002:
+    dc.b    "Fighting, Wrestling",0
+Category_003:
+    dc.b    "Shoot 'em up",0
+Category_004:
+    dc.b    "Shoot 'em up",0
+Category_005:
+    dc.b    "Fighting",0
+Category_006:
+    dc.b    "Shoot 'em up",0
+Category_007:
+    dc.b    "Shoot 'em up",0
+Category_008:
+    dc.b    "Fighting",0
+Category_009:
+    dc.b    "Fighting",0
+Category_010:
+    dc.b    "Fighting",0
+Category_011:
+    dc.b    "Board game",0
+Category_012:
+    dc.b    "Platform",0
+Category_013:
+    dc.b    "Sports",0
+Category_014:
+    dc.b    "Sports",0
+Category_015:
+    dc.b    "Sports",0
+Category_016:
+    dc.b    "Sports",0
+Category_017:
+    dc.b    "Shoot 'em up",0
+Category_018:
+    dc.b    "Platform",0
+Category_019:
+    dc.b    "Fighting",0
+Category_020:
+    dc.b    "Fighting",0
+Category_021:
+    dc.b    "Beat 'em up",0
+Category_022:
+    dc.b    "Puzzle",0
+Category_023:
+    dc.b    "Puzzle",0
+Category_024:
+    dc.b    "Shoot 'em up",0
+Category_025:
+    dc.b    "Quiz game",0
+Category_026:
+    dc.b    "Action RPG",0
+Category_027:
+    dc.b    "Action RPG",0
+Category_028:
+    dc.b    "Run and gun",0
+Category_029:
+    dc.b    "Fighting",0
+Category_030:
+    dc.b    "Beat 'em up",0
+Category_031:
+    dc.b    "Fighting",0
+Category_032:
+    dc.b    "Fighting",0
+Category_033:
+    dc.b    "Fighting",0
+Category_034:
+    dc.b    "Fighting",0
+Category_035:
+    dc.b    "Fighting",0
+Category_036:
+    dc.b    "Fighting",0
+Category_037:
+    dc.b    "Sports",0
+Category_038:
+    dc.b    "Fighting",0
+Category_039:
+    dc.b    "Hack and slash, Platform",0
+Category_040:
+    dc.b    "Fighting",0
+Category_041:
+    dc.b    "Shoot 'em up",0
+Category_042:
+    dc.b    "Puzzle",0
+Category_043:
+    dc.b    "Sports",0
+Category_044:
+    dc.b    "Puzzle",0
+Category_045:
+    dc.b    "Paddle Action",0
+Category_046:
+    dc.b    "Board game",0
+Category_047:
+    dc.b    "Shoot 'em up",0
+Category_048:
+    dc.b    "Board game",0
+Category_049:
+    dc.b    "Fighting",0
+Category_050:
+    dc.b    "Fighting, Wrestling",0
+Category_051:
+    dc.b    "Fighting, Wrestling",0
+Category_052:
+    dc.b    "Fighting",0
+Category_053:
+    dc.b    "Shoot 'em up",0
+Category_054:
+    dc.b    "Sports",0
+Category_055:
+    dc.b    "Beat 'em up, Fighting",0
+Category_056:
+    dc.b    "Puzzle",0
+Category_057:
+    dc.b    "Puzzle",0
+Category_058:
+    dc.b    "Platform",0
+Category_059:
+    dc.b    "Board game",0
+Category_060:
+    dc.b    "Board game",0
+Category_061:
+    dc.b    "Fighting",0
+Category_062:
+    dc.b    "Run and gun",0
+Category_063:
+    dc.b    "Run and gun",0
+Category_064:
+    dc.b    "Run and gun",0
+Category_065:
+    dc.b    "Run and gun",0
+Category_066:
+    dc.b    "Run and gun",0
+Category_067:
+    dc.b    "Run and gun",0
+Category_068:
+    dc.b    "Run and gun",0
+Category_069:
+    dc.b    "Board game",0
+Category_070:
+    dc.b    "Puzzle",0
+Category_071:
+    dc.b    "Beat 'em up",0
+Category_072:
+    dc.b    "Shooter",0
+Category_073:
+    dc.b    "Action, Maze",0
+Category_074:
+    dc.b    "Racing",0
+Category_075:
+    dc.b    "Action, Maze",0
+Category_076:
+    dc.b    "Sports",0
+Category_077:
+    dc.b    "Sports",0
+Category_078:
+    dc.b    "Platform",0
+Category_079:
+    dc.b    "Beat 'em up, Hack and slash",0
+Category_080:
+    dc.b    "Run and gun",0
+Category_081:
+    dc.b    "Fighting",0
+Category_082:
+    dc.b    "Racing",0
+Category_083:
+    dc.b    "Puzzle",0
+Category_084:
+    dc.b    "Sports",0
+Category_085:
+    dc.b    "Puzzle",0
+Category_086:
+    dc.b    "Action",0
+Category_087:
+    dc.b    "Sports",0
+Category_088:
+    dc.b    "Shoot 'em up",0
+Category_089:
+    dc.b    "Shoot 'em up",0
+Category_090:
+    dc.b    "Puzzle",0
+Category_091:
+    dc.b    "Puzzle",0
+Category_092:
+    dc.b    "Puzzle",0
+Category_093:
+    dc.b    "Quiz game",0
+Category_094:
+    dc.b    "Quiz game",0
+Category_095:
+    dc.b    "Quiz game",0
+Category_096:
+    dc.b    "Fighting",0
+Category_097:
+    dc.b    "Fighting",0
+Category_098:
+    dc.b    "Fighting",0
+Category_099:
+    dc.b    "Fighting",0
+Category_100:
+    dc.b    "Fighting",0
+Category_101:
+    dc.b    "Racing",0
+Category_102:
+    dc.b    "Beat 'em up",0
+Category_103:
+    dc.b    "Fighting",0
+Category_104:
+    dc.b    "Fighting",0
+Category_105:
+    dc.b    "Fighting",0
+Category_106:
+    dc.b    "Fighting",0
+Category_107:
+    dc.b    "Fighting",0
+Category_108:
+    dc.b    "Fighting",0
+Category_109:
+    dc.b    "Fighting",0
+Category_110:
+    dc.b    "Fighting",0
+Category_111:
+    dc.b    "Fighting",0
+Category_112:
+    dc.b    "Beat 'em up, Hack and slash",0
+Category_113:
+    dc.b    "Beat 'em up, Hack and slash",0
+Category_114:
+    dc.b    "Beat 'em up, Hack and slash",0
+Category_115:
+    dc.b    "Run and gun",0
+Category_116:
+    dc.b    "Run and gun",0
+Category_117:
+    dc.b    "Sports",0
+Category_118:
+    dc.b    "Platform",0
+Category_119:
+    dc.b    "Sports",0
+Category_120:
+    dc.b    "Sports",0
+Category_121:
+    dc.b    "Sports",0
+Category_122:
+    dc.b    "Shoot 'em up",0
+Category_123:
+    dc.b    "Sports",0
+Category_124:
+    dc.b    "Sports",0
+Category_125:
+    dc.b    "Sports",0
+Category_126:
+    dc.b    "Sports",0
+Category_127:
+    dc.b    "Sports",0
+Category_128:
+    dc.b    "Sports",0
+Category_129:
+    dc.b    "Fighting",0
+Category_130:
+    dc.b    "Action, Maze",0
+Category_131:
+    dc.b    "Fighting",0
+Category_132:
+    dc.b    "Fighting",0
+Category_133:
+    dc.b    "Fighting",0
+Category_134:
+    dc.b    "Fighting",0
+Category_135:
+    dc.b    "Fighting",0
+Category_136:
+    dc.b    "Fighting",0
+Category_137:
+    dc.b    "Fighting",0
+Category_138:
+    dc.b    "Fighting",0
+Category_139:
+    dc.b    "Fighting",0
+Category_140:
+    dc.b    "Fighting",0
+Category_141:
+    dc.b    "Fighting",0
+Category_142:
+    dc.b    "Fighting",0
+Category_143:
+    dc.b    "Action RPG",0
+Category_144:
+    dc.b    "Sports",0
+Category_145:
+    dc.b    "Racing",0
+Category_146:
+    dc.b    "Platform",0
+Category_147:
+    dc.b    "Sports",0
+Category_148:
+    dc.b    "Shoot 'em up",0
+Category_149:
+    dc.b    "Shoot 'em up",0
+Category_150:
+    dc.b    "Fighting",0
+Category_151:
+    dc.b    "Fighting",0
+Category_152:
+    dc.b    "Sports",0
+Category_153:
+    dc.b    "Fighting",0
+Category_154:
+    dc.b    "Fighting",0
+Category_155:
+    dc.b    "Fighting",0
+Category_156:
+    dc.b    "Fighting",0
+Category_157:
+    dc.b    "Multidirectional shooter",0
+Category_158:
+    dc.b    "Scrolling shooter",0
+Category_159:
+    dc.b    "Shoot 'em up",0
+Category_160:
+    dc.b    "Puzzle",0
+Category_161:
+    dc.b    "Platform",0
+CategoriesEnd:
+
+    even
+
+CategoriesTable:
+    dc.l    Category_001
+    dc.l    Category_002
+    dc.l    Category_003
+    dc.l    Category_004
+    dc.l    Category_005
+    dc.l    Category_006
+    dc.l    Category_007
+    dc.l    Category_008
+    dc.l    Category_009
+    dc.l    Category_010
+    dc.l    Category_011
+    dc.l    Category_012
+    dc.l    Category_013
+    dc.l    Category_014
+    dc.l    Category_015
+    dc.l    Category_016
+    dc.l    Category_017
+    dc.l    Category_018
+    dc.l    Category_019
+    dc.l    Category_020
+    dc.l    Category_021
+    dc.l    Category_022
+    dc.l    Category_023
+    dc.l    Category_024
+    dc.l    Category_025
+    dc.l    Category_026
+    dc.l    Category_027
+    dc.l    Category_028
+    dc.l    Category_029
+    dc.l    Category_030
+    dc.l    Category_031
+    dc.l    Category_032
+    dc.l    Category_033
+    dc.l    Category_034
+    dc.l    Category_035
+    dc.l    Category_036
+    dc.l    Category_037
+    dc.l    Category_038
+    dc.l    Category_039
+    dc.l    Category_040
+    dc.l    Category_041
+    dc.l    Category_042
+    dc.l    Category_043
+    dc.l    Category_044
+    dc.l    Category_045
+    dc.l    Category_046
+    dc.l    Category_047
+    dc.l    Category_048
+    dc.l    Category_049
+    dc.l    Category_050
+    dc.l    Category_051
+    dc.l    Category_052
+    dc.l    Category_053
+    dc.l    Category_054
+    dc.l    Category_055
+    dc.l    Category_056
+    dc.l    Category_057
+    dc.l    Category_058
+    dc.l    Category_059
+    dc.l    Category_060
+    dc.l    Category_061
+    dc.l    Category_062
+    dc.l    Category_063
+    dc.l    Category_064
+    dc.l    Category_065
+    dc.l    Category_066
+    dc.l    Category_067
+    dc.l    Category_068
+    dc.l    Category_069
+    dc.l    Category_070
+    dc.l    Category_071
+    dc.l    Category_072
+    dc.l    Category_073
+    dc.l    Category_074
+    dc.l    Category_075
+    dc.l    Category_076
+    dc.l    Category_077
+    dc.l    Category_078
+    dc.l    Category_079
+    dc.l    Category_080
+    dc.l    Category_081
+    dc.l    Category_082
+    dc.l    Category_083
+    dc.l    Category_084
+    dc.l    Category_085
+    dc.l    Category_086
+    dc.l    Category_087
+    dc.l    Category_088
+    dc.l    Category_089
+    dc.l    Category_090
+    dc.l    Category_091
+    dc.l    Category_092
+    dc.l    Category_093
+    dc.l    Category_094
+    dc.l    Category_095
+    dc.l    Category_096
+    dc.l    Category_097
+    dc.l    Category_098
+    dc.l    Category_099
+    dc.l    Category_100
+    dc.l    Category_101
+    dc.l    Category_102
+    dc.l    Category_103
+    dc.l    Category_104
+    dc.l    Category_105
+    dc.l    Category_106
+    dc.l    Category_107
+    dc.l    Category_108
+    dc.l    Category_109
+    dc.l    Category_110
+    dc.l    Category_111
+    dc.l    Category_112
+    dc.l    Category_113
+    dc.l    Category_114
+    dc.l    Category_115
+    dc.l    Category_116
+    dc.l    Category_117
+    dc.l    Category_118
+    dc.l    Category_119
+    dc.l    Category_120
+    dc.l    Category_121
+    dc.l    Category_122
+    dc.l    Category_123
+    dc.l    Category_124
+    dc.l    Category_125
+    dc.l    Category_126
+    dc.l    Category_127
+    dc.l    Category_128
+    dc.l    Category_129
+    dc.l    Category_130
+    dc.l    Category_131
+    dc.l    Category_132
+    dc.l    Category_133
+    dc.l    Category_134
+    dc.l    Category_135
+    dc.l    Category_136
+    dc.l    Category_137
+    dc.l    Category_138
+    dc.l    Category_139
+    dc.l    Category_140
+    dc.l    Category_141
+    dc.l    Category_142
+    dc.l    Category_143
+    dc.l    Category_144
+    dc.l    Category_145
+    dc.l    Category_146
+    dc.l    Category_147
+    dc.l    Category_148
+    dc.l    Category_149
+    dc.l    Category_150
+    dc.l    Category_151
+    dc.l    Category_152
+    dc.l    Category_153
+    dc.l    Category_154
+    dc.l    Category_155
+    dc.l    Category_156
+    dc.l    Category_157
+    dc.l    Category_158
+    dc.l    Category_159
+    dc.l    Category_160
+    dc.l    Category_161
+CategoriesTable_End:
 
 
 Gameslist_j:
@@ -1686,7 +2179,7 @@ GameInfo_j_091:
 GameInfo_j_092:
     dc.b    "1991 SNK",0
 GameInfo_j_093:
-    dc.b    "1995 Saurus ",0
+    dc.b    "1995 Saurus",0
 GameInfo_j_094:
     dc.b    "1992 SNK",0
 GameInfo_j_095:
@@ -1732,7 +2225,7 @@ GameInfo_j_114:
 GameInfo_j_115:
     dc.b    "1994 SNK",0
 GameInfo_j_116:
-    dc.b    "1996 Saurus ",0
+    dc.b    "1996 Saurus",0
 GameInfo_j_117:
     dc.b    "1997 Saurus",0
 GameInfo_j_118:
@@ -1990,3 +2483,496 @@ GameInfosTable_j:
     dc.l    GameInfo_j_160
     dc.l    GameInfo_j_161
 GameInfosTable_j_End:
+
+    even
+
+Categories_j:
+Category_j_001:
+    dc.b    "Test",0
+Category_j_002:
+    dc.b    "Fighting, Wrestling",0
+Category_j_003:
+    dc.b    "Shoot 'em up",0
+Category_j_004:
+    dc.b    "Shoot 'em up",0
+Category_j_005:
+    dc.b    "Fighting",0
+Category_j_006:
+    dc.b    "Shoot 'em up",0
+Category_j_007:
+    dc.b    "Shoot 'em up",0
+Category_j_008:
+    dc.b    "Fighting",0
+Category_j_009:
+    dc.b    "Fighting",0
+Category_j_010:
+    dc.b    "Fighting",0
+Category_j_011:
+    dc.b    "Board game",0
+Category_j_012:
+    dc.b    "Platform",0
+Category_j_013:
+    dc.b    "Sports",0
+Category_j_014:
+    dc.b    "Sports",0
+Category_j_015:
+    dc.b    "Sports",0
+Category_j_016:
+    dc.b    "Sports",0
+Category_j_017:
+    dc.b    "Shoot 'em up",0
+Category_j_018:
+    dc.b    "Platform",0
+Category_j_019:
+    dc.b    "Fighting",0
+Category_j_020:
+    dc.b    "Fighting",0
+Category_j_021:
+    dc.b    "Beat 'em up",0
+Category_j_022:
+    dc.b    "Puzzle",0
+Category_j_023:
+    dc.b    "Puzzle",0
+Category_j_024:
+    dc.b    "Shoot 'em up",0
+Category_j_025:
+    dc.b    "Quiz game",0
+Category_j_026:
+    dc.b    "Action RPG",0
+Category_j_027:
+    dc.b    "Action RPG",0
+Category_j_028:
+    dc.b    "Run and gun",0
+Category_j_029:
+    dc.b    "Fighting",0
+Category_j_030:
+    dc.b    "Beat 'em up",0
+Category_j_031:
+    dc.b    "Fighting",0
+Category_j_032:
+    dc.b    "Fighting",0
+Category_j_033:
+    dc.b    "Fighting",0
+Category_j_034:
+    dc.b    "Fighting",0
+Category_j_035:
+    dc.b    "Fighting",0
+Category_j_036:
+    dc.b    "Fighting",0
+Category_j_037:
+    dc.b    "Sports",0
+Category_j_038:
+    dc.b    "Fighting",0
+Category_j_039:
+    dc.b    "Hack and slash, Platform",0
+Category_j_040:
+    dc.b    "Fighting",0
+Category_j_041:
+    dc.b    "Shoot 'em up",0
+Category_j_042:
+    dc.b    "Puzzle",0
+Category_j_043:
+    dc.b    "Sports",0
+Category_j_044:
+    dc.b    "Puzzle",0
+Category_j_045:
+    dc.b    "Paddle Action",0
+Category_j_046:
+    dc.b    "Board game",0
+Category_j_047:
+    dc.b    "Shoot 'em up",0
+Category_j_048:
+    dc.b    "Board game",0
+Category_j_049:
+    dc.b    "Fighting",0
+Category_j_050:
+    dc.b    "Fighting, Wrestling",0
+Category_j_051:
+    dc.b    "Fighting, Wrestling",0
+Category_j_052:
+    dc.b    "Fighting",0
+Category_j_053:
+    dc.b    "Shoot 'em up",0
+Category_j_054:
+    dc.b    "Sports",0
+Category_j_055:
+    dc.b    "Beat 'em up, Fighting",0
+Category_j_056:
+    dc.b    "Puzzle",0
+Category_j_057:
+    dc.b    "Puzzle",0
+Category_j_058:
+    dc.b    "Platform",0
+Category_j_059:
+    dc.b    "Board game",0
+Category_j_060:
+    dc.b    "Board game",0
+Category_j_061:
+    dc.b    "Fighting",0
+Category_j_062:
+    dc.b    "Run and gun",0
+Category_j_063:
+    dc.b    "Run and gun",0
+Category_j_064:
+    dc.b    "Run and gun",0
+Category_j_065:
+    dc.b    "Run and gun",0
+Category_j_066:
+    dc.b    "Run and gun",0
+Category_j_067:
+    dc.b    "Run and gun",0
+Category_j_068:
+    dc.b    "Run and gun",0
+Category_j_069:
+    dc.b    "Board game",0
+Category_j_070:
+    dc.b    "Puzzle",0
+Category_j_071:
+    dc.b    "Beat 'em up",0
+Category_j_072:
+    dc.b    "Shooter",0
+Category_j_073:
+    dc.b    "Action, Maze",0
+Category_j_074:
+    dc.b    "Racing",0
+Category_j_075:
+    dc.b    "Action, Maze",0
+Category_j_076:
+    dc.b    "Sports",0
+Category_j_077:
+    dc.b    "Sports",0
+Category_j_078:
+    dc.b    "Platform",0
+Category_j_079:
+    dc.b    "Beat 'em up, Hack and slash",0
+Category_j_080:
+    dc.b    "Run and gun",0
+Category_j_081:
+    dc.b    "Fighting",0
+Category_j_082:
+    dc.b    "Racing",0
+Category_j_083:
+    dc.b    "Puzzle",0
+Category_j_084:
+    dc.b    "Sports",0
+Category_j_085:
+    dc.b    "Puzzle",0
+Category_j_086:
+    dc.b    "Action",0
+Category_j_087:
+    dc.b    "Sports",0
+Category_j_088:
+    dc.b    "Shoot 'em up",0
+Category_j_089:
+    dc.b    "Shoot 'em up",0
+Category_j_090:
+    dc.b    "Puzzle",0
+Category_j_091:
+    dc.b    "Puzzle",0
+Category_j_092:
+    dc.b    "Puzzle",0
+Category_j_093:
+    dc.b    "Quiz game",0
+Category_j_094:
+    dc.b    "Quiz game",0
+Category_j_095:
+    dc.b    "Quiz game",0
+Category_j_096:
+    dc.b    "Fighting",0
+Category_j_097:
+    dc.b    "Fighting",0
+Category_j_098:
+    dc.b    "Fighting",0
+Category_j_099:
+    dc.b    "Fighting",0
+Category_j_100:
+    dc.b    "Fighting",0
+Category_j_101:
+    dc.b    "Racing",0
+Category_j_102:
+    dc.b    "Beat 'em up",0
+Category_j_103:
+    dc.b    "Fighting",0
+Category_j_104:
+    dc.b    "Fighting",0
+Category_j_105:
+    dc.b    "Fighting",0
+Category_j_106:
+    dc.b    "Fighting",0
+Category_j_107:
+    dc.b    "Fighting",0
+Category_j_108:
+    dc.b    "Fighting",0
+Category_j_109:
+    dc.b    "Fighting",0
+Category_j_110:
+    dc.b    "Fighting",0
+Category_j_111:
+    dc.b    "Fighting",0
+Category_j_112:
+    dc.b    "Beat 'em up, Hack and slash",0
+Category_j_113:
+    dc.b    "Beat 'em up, Hack and slash",0
+Category_j_114:
+    dc.b    "Beat 'em up, Hack and slash",0
+Category_j_115:
+    dc.b    "Run and gun",0
+Category_j_116:
+    dc.b    "Run and gun",0
+Category_j_117:
+    dc.b    "Sports",0
+Category_j_118:
+    dc.b    "Platform",0
+Category_j_119:
+    dc.b    "Sports",0
+Category_j_120:
+    dc.b    "Sports",0
+Category_j_121:
+    dc.b    "Sports",0
+Category_j_122:
+    dc.b    "Shoot 'em up",0
+Category_j_123:
+    dc.b    "Sports",0
+Category_j_124:
+    dc.b    "Sports",0
+Category_j_125:
+    dc.b    "Sports",0
+Category_j_126:
+    dc.b    "Sports",0
+Category_j_127:
+    dc.b    "Sports",0
+Category_j_128:
+    dc.b    "Sports",0
+Category_j_129:
+    dc.b    "Fighting",0
+Category_j_130:
+    dc.b    "Action, Maze",0
+Category_j_131:
+    dc.b    "Fighting",0
+Category_j_132:
+    dc.b    "Fighting",0
+Category_j_133:
+    dc.b    "Fighting",0
+Category_j_134:
+    dc.b    "Fighting",0
+Category_j_135:
+    dc.b    "Fighting",0
+Category_j_136:
+    dc.b    "Fighting",0
+Category_j_137:
+    dc.b    "Fighting",0
+Category_j_138:
+    dc.b    "Fighting",0
+Category_j_139:
+    dc.b    "Fighting",0
+Category_j_140:
+    dc.b    "Fighting",0
+Category_j_141:
+    dc.b    "Fighting",0
+Category_j_142:
+    dc.b    "Fighting",0
+Category_j_143:
+    dc.b    "Action RPG",0
+Category_j_144:
+    dc.b    "Sports",0
+Category_j_145:
+    dc.b    "Racing",0
+Category_j_146:
+    dc.b    "Platform",0
+Category_j_147:
+    dc.b    "Sports",0
+Category_j_148:
+    dc.b    "Shoot 'em up",0
+Category_j_149:
+    dc.b    "Shoot 'em up",0
+Category_j_150:
+    dc.b    "Fighting",0
+Category_j_151:
+    dc.b    "Fighting",0
+Category_j_152:
+    dc.b    "Sports",0
+Category_j_153:
+    dc.b    "Fighting",0
+Category_j_154:
+    dc.b    "Fighting",0
+Category_j_155:
+    dc.b    "Fighting",0
+Category_j_156:
+    dc.b    "Fighting",0
+Category_j_157:
+    dc.b    "Multidirectional shooter",0
+Category_j_158:
+    dc.b    "Scrolling shooter",0
+Category_j_159:
+    dc.b    "Shoot 'em up",0
+Category_j_160:
+    dc.b    "Puzzle",0
+Category_j_161:
+    dc.b    "Platform",0
+Categories_j_End:
+
+    even
+
+CategoriesTable_j:
+    dc.l    Category_j_001
+    dc.l    Category_j_002
+    dc.l    Category_j_003
+    dc.l    Category_j_004
+    dc.l    Category_j_005
+    dc.l    Category_j_006
+    dc.l    Category_j_007
+    dc.l    Category_j_008
+    dc.l    Category_j_009
+    dc.l    Category_j_010
+    dc.l    Category_j_011
+    dc.l    Category_j_012
+    dc.l    Category_j_013
+    dc.l    Category_j_014
+    dc.l    Category_j_015
+    dc.l    Category_j_016
+    dc.l    Category_j_017
+    dc.l    Category_j_018
+    dc.l    Category_j_019
+    dc.l    Category_j_020
+    dc.l    Category_j_021
+    dc.l    Category_j_022
+    dc.l    Category_j_023
+    dc.l    Category_j_024
+    dc.l    Category_j_025
+    dc.l    Category_j_026
+    dc.l    Category_j_027
+    dc.l    Category_j_028
+    dc.l    Category_j_029
+    dc.l    Category_j_030
+    dc.l    Category_j_031
+    dc.l    Category_j_032
+    dc.l    Category_j_033
+    dc.l    Category_j_034
+    dc.l    Category_j_035
+    dc.l    Category_j_036
+    dc.l    Category_j_037
+    dc.l    Category_j_038
+    dc.l    Category_j_039
+    dc.l    Category_j_040
+    dc.l    Category_j_041
+    dc.l    Category_j_042
+    dc.l    Category_j_043
+    dc.l    Category_j_044
+    dc.l    Category_j_045
+    dc.l    Category_j_046
+    dc.l    Category_j_047
+    dc.l    Category_j_048
+    dc.l    Category_j_049
+    dc.l    Category_j_050
+    dc.l    Category_j_051
+    dc.l    Category_j_052
+    dc.l    Category_j_053
+    dc.l    Category_j_054
+    dc.l    Category_j_055
+    dc.l    Category_j_056
+    dc.l    Category_j_057
+    dc.l    Category_j_058
+    dc.l    Category_j_059
+    dc.l    Category_j_060
+    dc.l    Category_j_061
+    dc.l    Category_j_062
+    dc.l    Category_j_063
+    dc.l    Category_j_064
+    dc.l    Category_j_065
+    dc.l    Category_j_066
+    dc.l    Category_j_067
+    dc.l    Category_j_068
+    dc.l    Category_j_069
+    dc.l    Category_j_070
+    dc.l    Category_j_071
+    dc.l    Category_j_072
+    dc.l    Category_j_073
+    dc.l    Category_j_074
+    dc.l    Category_j_075
+    dc.l    Category_j_076
+    dc.l    Category_j_077
+    dc.l    Category_j_078
+    dc.l    Category_j_079
+    dc.l    Category_j_080
+    dc.l    Category_j_081
+    dc.l    Category_j_082
+    dc.l    Category_j_083
+    dc.l    Category_j_084
+    dc.l    Category_j_085
+    dc.l    Category_j_086
+    dc.l    Category_j_087
+    dc.l    Category_j_088
+    dc.l    Category_j_089
+    dc.l    Category_j_090
+    dc.l    Category_j_091
+    dc.l    Category_j_092
+    dc.l    Category_j_093
+    dc.l    Category_j_094
+    dc.l    Category_j_095
+    dc.l    Category_j_096
+    dc.l    Category_j_097
+    dc.l    Category_j_098
+    dc.l    Category_j_099
+    dc.l    Category_j_100
+    dc.l    Category_j_101
+    dc.l    Category_j_102
+    dc.l    Category_j_103
+    dc.l    Category_j_104
+    dc.l    Category_j_105
+    dc.l    Category_j_106
+    dc.l    Category_j_107
+    dc.l    Category_j_108
+    dc.l    Category_j_109
+    dc.l    Category_j_110
+    dc.l    Category_j_111
+    dc.l    Category_j_112
+    dc.l    Category_j_113
+    dc.l    Category_j_114
+    dc.l    Category_j_115
+    dc.l    Category_j_116
+    dc.l    Category_j_117
+    dc.l    Category_j_118
+    dc.l    Category_j_119
+    dc.l    Category_j_120
+    dc.l    Category_j_121
+    dc.l    Category_j_122
+    dc.l    Category_j_123
+    dc.l    Category_j_124
+    dc.l    Category_j_125
+    dc.l    Category_j_126
+    dc.l    Category_j_127
+    dc.l    Category_j_128
+    dc.l    Category_j_129
+    dc.l    Category_j_130
+    dc.l    Category_j_131
+    dc.l    Category_j_132
+    dc.l    Category_j_133
+    dc.l    Category_j_134
+    dc.l    Category_j_135
+    dc.l    Category_j_136
+    dc.l    Category_j_137
+    dc.l    Category_j_138
+    dc.l    Category_j_139
+    dc.l    Category_j_140
+    dc.l    Category_j_141
+    dc.l    Category_j_142
+    dc.l    Category_j_143
+    dc.l    Category_j_144
+    dc.l    Category_j_145
+    dc.l    Category_j_146
+    dc.l    Category_j_147
+    dc.l    Category_j_148
+    dc.l    Category_j_149
+    dc.l    Category_j_150
+    dc.l    Category_j_151
+    dc.l    Category_j_152
+    dc.l    Category_j_153
+    dc.l    Category_j_154
+    dc.l    Category_j_155
+    dc.l    Category_j_156
+    dc.l    Category_j_157
+    dc.l    Category_j_158
+    dc.l    Category_j_159
+    dc.l    Category_j_160
+    dc.l    Category_j_161
+CategoriesTable_j_End:

@@ -8,6 +8,7 @@ RAM_CurrentPage	        equ $100006	; (byte) Current Page
 RAM_CurrentIndex        equ $100007	; (byte) Current Index  
 RAM_CurrentListPos      equ $100008	; (byte) Current List Position
 RAM_CurrentListPosR     equ $100009	; (byte) Current List Position in Counter (reversed order)
+RAM_ListMode            equ $10000A	; (byte) List Mode flag
 
 ; copies of registers used for drawing updates
 ; [Player 1]
