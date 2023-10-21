@@ -6,9 +6,9 @@
 ```
 # MENU FOR NEO GEO 161in1 MULTICART 
 
-- based on the work of [Vortex](https://github.com/xvortex/VTXCart)
-- used Furrtek's "Hello World" [example code](https://wiki.neogeodev.org/index.php?title=Hello_world_tutorial)
-- ongoing discusion on [arcade-projects.com](https://www.arcade-projects.com/threads/reverse-engineering-161-in-1-cartridge-to-change-rom-games.15069/latest)
+- Based on the work of [Vortex](https://github.com/xvortex/VTXCart)
+- Used Furrtek's "Hello World" [example code](https://wiki.neogeodev.org/index.php?title=Hello_world_tutorial)
+- Ongoing discussion on [arcade-projects.com](https://www.arcade-projects.com/threads/reverse-engineering-161-in-1-cartridge-to-change-rom-games.15069/latest)
 
 ---
 
