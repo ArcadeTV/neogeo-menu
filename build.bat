@@ -5,7 +5,7 @@ REM ----------------------------------------------------------------------------
 REM NG_MENU // build.bat
 REM ArcadeTV
 REM // Created: 2023/10/13 10:19:32
-REM // Last modified: 2023/10/20 22:39:40
+REM // Last modified: 2023/10/21 21:01:08
 REM -------------------------------------------------------------------------------------------------
 
 CLS
@@ -89,7 +89,6 @@ REM Finished
 echo -END OF LOG->>.\tmp\build.log
 echo Done. Created !OUTFILE!
 echo ROM was padded to %PADTO% MBit.
-copy .\MAME\roms\menu\!OUTFILE! D:\MAME\roms\menu
 exit /b
 
 
