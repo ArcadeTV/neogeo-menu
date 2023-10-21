@@ -998,9 +998,9 @@ GameInfosTable_End:
 
 Categories:
 Category_001:
-    dc.b    "Test",0
+    dc.b    "Tool",0
 Category_002:
-    dc.b    "Fighting, Wrestling",0
+    dc.b    "Wrestling",0
 Category_003:
     dc.b    "Shoot 'em up",0
 Category_004:
@@ -1052,7 +1052,7 @@ Category_026:
 Category_027:
     dc.b    "Action RPG",0
 Category_028:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_029:
     dc.b    "Fighting",0
 Category_030:
@@ -1074,7 +1074,7 @@ Category_037:
 Category_038:
     dc.b    "Fighting",0
 Category_039:
-    dc.b    "Hack and slash, Platform",0
+    dc.b    "Hack & Slay",0
 Category_040:
     dc.b    "Fighting",0
 Category_041:
@@ -1096,9 +1096,9 @@ Category_048:
 Category_049:
     dc.b    "Fighting",0
 Category_050:
-    dc.b    "Fighting, Wrestling",0
+    dc.b    "Wrestling",0
 Category_051:
-    dc.b    "Fighting, Wrestling",0
+    dc.b    "Wrestling",0
 Category_052:
     dc.b    "Fighting",0
 Category_053:
@@ -1106,7 +1106,7 @@ Category_053:
 Category_054:
     dc.b    "Sports",0
 Category_055:
-    dc.b    "Beat 'em up, Fighting",0
+    dc.b    "Beat 'em up",0
 Category_056:
     dc.b    "Puzzle",0
 Category_057:
@@ -1120,19 +1120,19 @@ Category_060:
 Category_061:
     dc.b    "Fighting",0
 Category_062:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_063:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_064:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_065:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_066:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_067:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_068:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_069:
     dc.b    "Board game",0
 Category_070:
@@ -1154,9 +1154,9 @@ Category_077:
 Category_078:
     dc.b    "Platform",0
 Category_079:
-    dc.b    "Beat 'em up, Hack and slash",0
+    dc.b    "Hack & Slay",0
 Category_080:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_081:
     dc.b    "Fighting",0
 Category_082:
@@ -1220,15 +1220,15 @@ Category_110:
 Category_111:
     dc.b    "Fighting",0
 Category_112:
-    dc.b    "Beat 'em up, Hack and slash",0
+    dc.b    "Hack & Slay",0
 Category_113:
-    dc.b    "Beat 'em up, Hack and slash",0
+    dc.b    "Hack & Slay",0
 Category_114:
-    dc.b    "Beat 'em up, Hack and slash",0
+    dc.b    "Hack & Slay",0
 Category_115:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_116:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_117:
     dc.b    "Sports",0
 Category_118:
@@ -1310,9 +1310,9 @@ Category_155:
 Category_156:
     dc.b    "Fighting",0
 Category_157:
-    dc.b    "Multidirectional shooter",0
+    dc.b    "Run & Gun",0
 Category_158:
-    dc.b    "Scrolling shooter",0
+    dc.b    "Shoot 'em up",0
 Category_159:
     dc.b    "Shoot 'em up",0
 Category_160:
@@ -2488,9 +2488,9 @@ GameInfosTable_j_End:
 
 Categories_j:
 Category_j_001:
-    dc.b    "Test",0
+    dc.b    "Tool",0
 Category_j_002:
-    dc.b    "Fighting, Wrestling",0
+    dc.b    "Wrestling",0
 Category_j_003:
     dc.b    "Shoot 'em up",0
 Category_j_004:
@@ -2542,7 +2542,7 @@ Category_j_026:
 Category_j_027:
     dc.b    "Action RPG",0
 Category_j_028:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_029:
     dc.b    "Fighting",0
 Category_j_030:
@@ -2564,7 +2564,7 @@ Category_j_037:
 Category_j_038:
     dc.b    "Fighting",0
 Category_j_039:
-    dc.b    "Hack and slash, Platform",0
+    dc.b    "Hack & Slay",0
 Category_j_040:
     dc.b    "Fighting",0
 Category_j_041:
@@ -2586,9 +2586,9 @@ Category_j_048:
 Category_j_049:
     dc.b    "Fighting",0
 Category_j_050:
-    dc.b    "Fighting, Wrestling",0
+    dc.b    "Wrestling",0
 Category_j_051:
-    dc.b    "Fighting, Wrestling",0
+    dc.b    "Wrestling",0
 Category_j_052:
     dc.b    "Fighting",0
 Category_j_053:
@@ -2596,7 +2596,7 @@ Category_j_053:
 Category_j_054:
     dc.b    "Sports",0
 Category_j_055:
-    dc.b    "Beat 'em up, Fighting",0
+    dc.b    "Beat 'em up",0
 Category_j_056:
     dc.b    "Puzzle",0
 Category_j_057:
@@ -2610,19 +2610,19 @@ Category_j_060:
 Category_j_061:
     dc.b    "Fighting",0
 Category_j_062:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_063:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_064:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_065:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_066:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_067:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_068:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_069:
     dc.b    "Board game",0
 Category_j_070:
@@ -2644,9 +2644,9 @@ Category_j_077:
 Category_j_078:
     dc.b    "Platform",0
 Category_j_079:
-    dc.b    "Beat 'em up, Hack and slash",0
+    dc.b    "Hack & Slay",0
 Category_j_080:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_081:
     dc.b    "Fighting",0
 Category_j_082:
@@ -2710,15 +2710,15 @@ Category_j_110:
 Category_j_111:
     dc.b    "Fighting",0
 Category_j_112:
-    dc.b    "Beat 'em up, Hack and slash",0
+    dc.b    "Hack & Slay",0
 Category_j_113:
-    dc.b    "Beat 'em up, Hack and slash",0
+    dc.b    "Hack & Slay",0
 Category_j_114:
-    dc.b    "Beat 'em up, Hack and slash",0
+    dc.b    "Hack & Slay",0
 Category_j_115:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_116:
-    dc.b    "Run and gun",0
+    dc.b    "Run & Gun",0
 Category_j_117:
     dc.b    "Sports",0
 Category_j_118:
@@ -2800,9 +2800,9 @@ Category_j_155:
 Category_j_156:
     dc.b    "Fighting",0
 Category_j_157:
-    dc.b    "Multidirectional shooter",0
+    dc.b    "Run & Gun",0
 Category_j_158:
-    dc.b    "Scrolling shooter",0
+    dc.b    "Shoot 'em up",0
 Category_j_159:
     dc.b    "Shoot 'em up",0
 Category_j_160:
