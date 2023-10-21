@@ -138,7 +138,15 @@ updateGameInfo:
     add.w   d0,d0
     add.w   d0,d0
     move.l  #POS_GAME_INFO,d6               ; initial start-to-write position in fix map
+
+    tst.b   BIOS_COUNTRY_CODE               ; test if register is 0 (Japan region)
+    beq.w   .loadJapTable                    ; if it is, branch to load the jap titles Table
     lea     GameInfosTable,a0               ; Load the text's table address in A0
+    bra.s   .loadUsaTable
+.loadJapTable:
+    lea     GameInfosTable_j,a0             ; Load the text's address in A0
+.loadUsaTable:
+
     movea.l (a0,d0),a0
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
     move.w  #$0000,d0                       ; tiles from address $0 in S ROM
@@ -162,7 +170,13 @@ updateGameInfo:
     move.l  #POS_MEGS,d6                    ; initial start-to-write position in fix map
     move.b  (RAM_CurrentIndex),d1           ; Fetch current List-Index in d1
     mulu.w  #3,d1                           ; Multiply with 3 because our index-number-string consists of 3 digits
-    lea     Megs,a0                         ; Load the first text's address in A0
+    tst.b   BIOS_COUNTRY_CODE               ; test if register is 0 (Japan region)
+    beq.w   .loadJapMegs                    ; if it is, branch to load the jap titles Megs
+    lea     Megs,a0                         ; Load the text's address in A0
+    bra.s   .loadUsaMegs
+.loadJapMegs:
+    lea     Megs_j,a0                  ; Load the text's address in A0
+.loadUsaMegs:
     add.l	d1,a0                           ; offset
 
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
@@ -232,11 +246,13 @@ renderList:
     tst.b   BIOS_COUNTRY_CODE               ; test if register is 0 (Japan region)
     beq.w   .loadJapList                    ; if it is, branch to load the jap titles list
     lea     Gameslist,a0                    ; Load the text's address in A0
+    bra.s   .loadUsaList
+.loadJapList:
+    lea     Gameslist_j,a0                  ; Load the text's address in A0
+.loadUsaList:
     mulu.w  #(LineLength*EntriesPerPage),d5 ; calculate the offset: linelen*items*currentPage
     add.w   d5,a0                           ; add the result to the gamelist-start offset
     bra.w   .writeListEntry                 ; skip loading jap titles because region is NOT 0
-.loadJapList:
-    lea     Gameslist_j,a0                  ; Load the text's address in A0
 .writeListEntry:
     ; Render upper half: ---
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
