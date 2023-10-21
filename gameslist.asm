@@ -691,13 +691,13 @@ GameInfo_092:
 GameInfo_093:
     dc.b    "1991 SNK",0
 GameInfo_094:
-    dc.b    "1995 Saurus",0
+    dc.b    "1995 Saurus ",0
 GameInfo_095:
     dc.b    "1992 SNK",0
 GameInfo_096:
     dc.b    "2002 Evoga",0
 GameInfo_097:
-    dc.b    "1996 Saurus",0
+    dc.b    "1996 Saurus ",0
 GameInfo_098:
     dc.b    "1995 SNK",0
 GameInfo_099:
@@ -1574,7 +1574,7 @@ Gameslist_j:
     dc.b    "PANIC BOMBER                    "
     dc.b    "POCHI AND NYAA                  "
     dc.b    "POWER SPIKES II                 "
-    dc.b    "PREHISTORIC ISLE 2              "
+    dc.b    "PREHISTORIC ISLE 3              "
     dc.b    "PULSTAR                         "
     dc.b    "PUZZLE BOBBLE                   "
     dc.b    "PUZZLE BOBBLE 2                 "
@@ -2179,7 +2179,7 @@ GameInfo_j_091:
 GameInfo_j_092:
     dc.b    "1991 SNK",0
 GameInfo_j_093:
-    dc.b    "1995 Saurus",0
+    dc.b    "1995 Saurus ",0
 GameInfo_j_094:
     dc.b    "1992 SNK",0
 GameInfo_j_095:
@@ -2225,7 +2225,7 @@ GameInfo_j_114:
 GameInfo_j_115:
     dc.b    "1994 SNK",0
 GameInfo_j_116:
-    dc.b    "1996 Saurus",0
+    dc.b    "1996 Saurus ",0
 GameInfo_j_117:
     dc.b    "1997 Saurus",0
 GameInfo_j_118:

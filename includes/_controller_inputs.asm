@@ -72,14 +72,36 @@ readControllerInputs:
     bra     .not_last_page
 
 .first_to_last_page:
-    move.b  #GamesCount,d1
-    move.b  #TotalListCount,d2
-    sub.b   d3,d1                           ; #GamesCount - RAM_CurrentListPosR
-    sub.b   d1,d2                           ; #TotalListCount - (#GamesCount - RAM_CurrentListPos)
-    move.b  RAM_CurrentIndex,d0             
-    sub.b   d2,d0                           
-    cmp.b   #GamesCount-1,d0
-    bhi.s   .adjustLastPosition             ; if index is greater than last games' index
+;    move.b  #GamesCount,d1
+;    move.b  #TotalListCount,d2
+;    sub.b   d3,d1                           ; #GamesCount - RAM_CurrentListPosR
+;    sub.b   d1,d2                           ; #TotalListCount - (#GamesCount - RAM_CurrentListPos)
+;    move.b  RAM_CurrentIndex,d0             
+;    sub.b   d2,d0                           
+;    cmp.b   #GamesCount-1,d0
+;    bhi.s   .adjustLastPosition             ; if index is greater than last games' index
+
+    move.b  RAM_CurrentIndex,d0
+    move.b  #EntriesPerPage,d1
+    move.b  #GamesCount,d2
+
+    sub.b   d1, d0                          ; d0 = RAM_CurrentIndex - EntriesPerPage
+
+                                            ; Addieren von GamesCount, um sicherzustellen, dass das Ergebnis positiv ist
+                                            ; Dies ist ein Trick, um mit negativen Zahlen in der Modulo-Operation umzugehen
+    add.b   d2, d0                          ; d0 = RAM_CurrentIndex - EntriesPerPage + GamesCount
+
+.left_modulo_loop:
+                                            ; Wenn RAM_CurrentIndex - EntriesPerPage + GamesCountn < GamesCount, sind wir fertig
+    cmp.b   d2, d0                          ; vergleiche d0 mit GamesCount
+    blt.s   .end_left_modulo                ; wenn d0 < d2, zum label "end_left_modulo" springen
+                                            ; Ansonsten, subtrahiere GamesCount von D0 und wiederhole
+    sub.b   d2, d0
+    bra.s   .left_modulo_loop
+.end_left_modulo:
+
+;
+;
     bra     .not_last_page
 .adjustLastPosition
     move.b  #GamesCount-1,d0                ; set index to last existing game
@@ -110,14 +132,35 @@ readControllerInputs:
 
 .page_before_last_page:                     ; Case: currentPage == TotalPages-2
                                             ; Calculate Index + EntriesPerPage
-    move.b  RAM_CurrentIndex,d0             ; Get CurrentIndex in Register d0
-    move.b  d0,d1
-    add.b   #EntriesPerPage,d1              ; Add EntriesPerPage to d0
-                                            
-    cmp.b   #GamesCount-1,d1                ; Compare to GamesCount-1
-    bcc     .not_greater                    ; branch if not greater
-.not_greater:
-    move.b  #GamesCount-1,d0                ; Index = GamesCount-1
+;
+
+    move.b  RAM_CurrentIndex,d0
+    move.b  #EntriesPerPage,d1
+    move.b  #GamesCount,d2
+
+    add.b   d1, d0                          ; d0 = RAM_CurrentIndex - EntriesPerPage
+
+                                            ; Addieren von GamesCount, um sicherzustellen, dass das Ergebnis positiv ist
+                                            ; Dies ist ein Trick, um mit negativen Zahlen in der Modulo-Operation umzugehen
+.right_modulo_loop:
+                                            ; Wenn RAM_CurrentIndex - EntriesPerPage + GamesCountn < GamesCount, sind wir fertig
+    cmp.b   d2, d0                          ; vergleiche d0 mit GamesCount
+    blt.s   .end_right_modulo               ; wenn d0 < d2, zum label "end_right_modulo" springen
+                                            ; Ansonsten, subtrahiere GamesCount von D0 und wiederhole
+    sub.b   d2, d0
+    bra.s   .right_modulo_loop
+.end_right_modulo:
+
+
+;    move.b  RAM_CurrentIndex,d0             ; Get CurrentIndex in Register d0
+;    move.b  d0,d1
+;    add.b   #EntriesPerPage,d1              ; Add EntriesPerPage to d0
+;                                            
+;    cmp.b   #GamesCount-1,d1                ; Compare to GamesCount-1
+;    bcc     .not_greater                    ; branch if not greater
+;    bra     .end_of_calc                    ; Branch out
+;.not_greater:
+;    move.b  #GamesCount-1,d0                ; Index = GamesCount-1
     bra     .end_of_calc                    ; Branch out
 
 .last_page:                                 ; Case: currentPage == TotalPages-1
