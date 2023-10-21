@@ -5,7 +5,7 @@
 ;
 ; ArcadeTV
 ; // Created: 2023/10/13 09:41:53
-; // Last modified: 2023/10/21 01:17:20
+; // Last modified: 2023/10/22 00:26:17
 ; ############################################################################################################
 
     INCLUDE "includes/regdefs.asm"
@@ -37,8 +37,12 @@
 
 ; DATA -------------------------------------
     INCLUDE "gameslist.asm"
-
     INCLUDE "includes/data_strings.asm"
+
+gameLaunchInstructions:
+    dc.b    $33,$C0,$00,$2C,$0F,$EE,$4E,$71,$4E,$70
+gameLaunchInstructions_end:
+
     align   4
     INCLUDE "version.asm"
 

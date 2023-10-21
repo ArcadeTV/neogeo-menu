@@ -16,7 +16,6 @@ This aims to be an alternative menu for the chinese 161in1 multicart that was fu
 
 ## Pending:
 
-- [ ] Game-launch on button-press
 - [ ] Documentation & instructions
 - [ ] Automated gamelist processing
 - [ ] Test on real hardware

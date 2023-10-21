@@ -82,3 +82,14 @@ Game:                                       ; Label defined in the jump table
     move.b  #CurrentPage,RAM_CurrentPage
     move.b  #CurrentListPos,RAM_CurrentListPos
     move.b  #CurrentListPosR,RAM_CurrentListPosR
+
+    ; copy game-launch instructions to RAM:
+    ; move.w  d0, $2c0fee.l
+    ; nop
+    ; reset
+    lea     gameLaunchInstructions,a0
+    lea     RAM_GAMELAUNCH,a1
+    move.l  #(gameLaunchInstructions_end-gameLaunchInstructions-1),d1
+.writeLaunchInstructionsToRAM:
+    move.b  (a0)+,(a1)+
+    dbra    d1,.writeLaunchInstructionsToRAM
