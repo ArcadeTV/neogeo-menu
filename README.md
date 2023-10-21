@@ -24,7 +24,11 @@ This aims to be an alternative menu for the chinese 161in1 multicart that was fu
 On Windows use the `build.bat` file to start the toolchain.
 When everything works as expected you'll find the `menu-p1.bin` romfile in the `MAME\roms\menu` folder.
 
-Although this was made to be used on real hardware, you can run in im MAME:
+---
+
+## Run the menu in MAME
+
+Although this was made to be used on real hardware, you can run it in MAME:
 
 1. Run `build.bat`
 2. Open `MAME\hash\neogeo.xml` from this repository in any text editor and copy the element `<software name="menu">` till `</software>` into the `neogeo.xml` from your MAME folder.
