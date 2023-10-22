@@ -70,3 +70,15 @@ As of today I generate it dynamically from this [google sheet](https://docs.goog
 - Go to [https://ngmenu.arcade-tv.de/](https://ngmenu.arcade-tv.de/) and fill your sheet ID in the textfield, then click `generate gameslist.asm`
 - Copy the generated text and replace the contents of your gamelist.asm
 - Build the ROM with the provided `build.bat`
+
+---
+
+## Limitations
+
+|       Text | Max characters |
+| ---------: | :------------- |
+| List Entry | 32             |
+|  Game Info | 22             |
+|       Megs | 3              |
+|        NGH | 4              |
+
