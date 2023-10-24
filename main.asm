@@ -5,7 +5,7 @@
 ;
 ; ArcadeTV
 ; // Created: 2023/10/13 09:41:53
-; // Last modified: 2023/10/22 00:26:17
+; // Last modified: 2023/10/24 13:03:15
 ; ############################################################################################################
 
     INCLUDE "includes/regdefs.asm"
@@ -21,9 +21,14 @@
 
 
 ; RENDER LIST ON STARTUP: -------------------
+    move.b  #GamesCount,d0 
+    tst.b   d0
+    beq     .noGamesFound
     jsr     renderGUI
     jsr     updateList
-
+    bra     .loop
+.noGamesFound
+    jsr     noGamesMessage
 
 ; MAIN LOOP: -------------------------------
 .loop:

@@ -313,3 +313,37 @@ renderList:
     dbra    d2,.writeListEntry              ; Jump back to .writeListEntry until all 8 rows are written
 
     rts
+
+
+
+noGamesMessage:
+.writeListEntry:
+    lea     Str_noGames,a0
+    move.l  #POS_LIST+8,d6                  ; initial upper left position in fix map
+    ; Render upper half: ---
+    move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
+    move.w  #$0100,d0                       ; Upper tiles are in S ROM bank 1, this word will be concatenated with a byte for tile-numer later
+    nop
+    move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
+    move.l  #(LineLength-1),d1              ; init d1 for column (text) length 32
+.writeupper:
+    move.b  (a0)+,d0                        ; Load D0's lower byte
+    move.w  d0,REG_VRAMRW                   ; Write to VRAM
+    nop                                     ; Wait a bit...
+    dbra    d1,.writeupper                  ; Jump back to .writeupper until all 32 chars are written
+
+    ; Render lower half: ---
+    sub.w   #LineLength,a0                  ; Go back 32 chars to write the same entry again, but with lower half tiles
+    add.w   #1,d6
+    move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
+    move.w  #$0200,d0                       ; Lower tiles are in S ROM bank 2, this word will be concatenated with a byte for tile-numer later
+    nop
+    move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
+    move.l  #(32-1),d1                      ; init d1 for column length 32
+.writelower:
+    move.b  (a0)+,d0                        ; Load D0's lower byte
+    move.w  d0,REG_VRAMRW                   ; Write to VRAM
+    nop                                     ; Wait a bit...
+    dbra    d1,.writelower                  ; Jump back to .writelower until all 32 chars are written
+
+    rts
