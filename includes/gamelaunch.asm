@@ -12,6 +12,7 @@ GAMELAUNCH:
 
     clr.l   d0
     move.b  RAM_CurrentIndex,d0
+    add.b   #1,d0
     jmp     (RAM_GAMELAUNCH)                ; jump to code starting at $100200 (RAM)
 
     
