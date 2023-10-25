@@ -1,12 +1,3 @@
-Write NGH.w to $2C0FEE and reset to launch games.
-(Instructions must be copied and called from RAM)
-
-```
-100200: move.w  D0, $2c0fee.l
-100206: nop
-100208: reset
-```
-
 Chinese Menu checks for button inputs and sets 0|1 flag in
 $108104 to $108107 (RAM).
 Game-launch is then starting from $FF000 (ROM)
