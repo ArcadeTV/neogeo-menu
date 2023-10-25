@@ -9,19 +9,7 @@ readControllerInputs:
     beq     .noa
     nop                                     ; A pressed
 
-    clr.l   d0
-    move.b  RAM_CurrentIndex,d0
-    add.w   d0,d0                           ; NGH values are WORD sized, so we need to double our byte in d0
-    tst.b   BIOS_COUNTRY_CODE               ; test if register is 0 (Japan region)
-    beq.w   .loadNGH_j                      ; if it is, branch to load the jap titles Table
-    lea     NGH,a0                          ; Load the NGH based on the US List
-    bra.s   .loadNGH
-.loadNGH_j:
-    lea     NGH_j,a0                        ; Load the NGH based on the JAP List
-.loadNGH:
-    move.w  (a0,d0),d0                      ; get the NGH
-
-    jmp     RAM_GAMELAUNCH                  ; Launch the selected game!
+    jmp     GAMELAUNCH                      ; Launch the selected game!
 
 
 .noa:

@@ -5,7 +5,7 @@
 ;
 ; ArcadeTV
 ; // Created: 2023/10/13 09:41:53
-; // Last modified: 2023/10/25 13:55:19
+; // Last modified: 2023/10/25 23:32:46
 ; ############################################################################################################
 
     INCLUDE "includes/regdefs.asm"
@@ -36,6 +36,8 @@
 .loop:
     bra     .loop
 
+; ROUTINES -----------------------------
+    INCLUDE "includes/gamelaunch.asm"
 
 ; SUB ROUTINES -----------------------------
     INCLUDE "includes/_controller_inputs.asm"
