@@ -41,5 +41,26 @@ renderStaticStrings:
     bra    .writeStr_Page                   ; Jump back to .writeStr_Page until all chars are written and 0 occured
 .writeStr_Page_complete:
 
+    rts
+
+
+Logo:
+    move.l  #$3280,d0                       ; tiles from address $280 in S ROM, use palette #3
+    move.l  #28-1,d2                        ; height: 28 tiles = 224px
+    move.l  #$7002,d3                       ; initial upper left position in fixmap
+    nop
+    move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
+.writeLogoColumns:
+    move.l  #40-1,d1                        ; loop counter for inner dbra loop -> width: 40 tiles = 320px
+    move.b  d0,REG_DIPSW                    ; Watchdog
+    move.w  d3,REG_VRAMADDR                 ; send start position to vram
+.writeLogoRow:
+    move.w  d0,REG_VRAMRW                   ; Write tileNo. to VRAM
+    addq    #1,d0
+    nop                                     ; Wait a bit...
+    dbra    d1,.writeLogoRow                ; Jump back to .writeLogo until all chars are written and 0 occured
+    addq    #1,d3                           ; next Row
+    dbra    d2,.writeLogoColumns
+.writeLogo_complete:
 
     rts

@@ -84,9 +84,12 @@ Game:                                       ; Label defined in the jump table
     move.b  #CurrentListPosR,RAM_CurrentListPosR
 
     ; copy game-launch instructions to RAM:
+    
     ; move.w  d0, $2c0fee.l
     ; nop
     ; reset
+    ; jmp     $c00402.l
+
     lea     gameLaunchInstructions,a0
     lea     RAM_GAMELAUNCH,a1
     move.l  #(gameLaunchInstructions_end-gameLaunchInstructions-1),d1

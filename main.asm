@@ -5,7 +5,7 @@
 ;
 ; ArcadeTV
 ; // Created: 2023/10/13 09:41:53
-; // Last modified: 2023/10/24 13:03:15
+; // Last modified: 2023/10/25 13:55:19
 ; ############################################################################################################
 
     INCLUDE "includes/regdefs.asm"
@@ -19,6 +19,8 @@
     INCLUDE "includes/system.asm"
     INCLUDE "includes/palettes.asm"
 
+    ;jsr     Logo 
+    ;bra     .loop
 
 ; RENDER LIST ON STARTUP: -------------------
     move.b  #GamesCount,d0 
@@ -45,7 +47,10 @@
     INCLUDE "includes/data_strings.asm"
 
 gameLaunchInstructions:
-    dc.b    $33,$C0,$00,$2C,$0F,$EE,$4E,$71,$4E,$70
+    dc.b    $33,$C0,$00,$2C,$0F,$EE         ; move.w  d0, $2c0fee.l
+    dc.b    $4E,$71                         ; nop
+    dc.b    $4E,$70                         ; reset
+    dc.b    $4E,$F9,$00,$C0,$04,$02         ; jmp     $c00402.l
 gameLaunchInstructions_end:
 
     align   4
