@@ -96,3 +96,4 @@ Game:                                       ; Label defined in the jump table
 .writeLaunchInstructionsToRAM:
     move.b  (a0)+,(a1)+
     dbra    d1,.writeLaunchInstructionsToRAM
+    

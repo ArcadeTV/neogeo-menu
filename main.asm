@@ -5,17 +5,13 @@
 ;
 ; ArcadeTV
 ; // Created: 2023/10/13 09:41:53
-; // Last modified: 2023/10/25 23:32:46
+; // Last modified: 2023/10/26 19:42:59
 ; ############################################################################################################
 
     INCLUDE "includes/regdefs.asm"
     INCLUDE "includes/header.asm"
     INCLUDE "includes/vars.asm"
     INCLUDE "includes/ram.asm"
-
-
-    ORG $300
-
     INCLUDE "includes/system.asm"
     INCLUDE "includes/palettes.asm"
 
@@ -46,7 +42,29 @@
 
 ; DATA -------------------------------------
     INCLUDE "gameslist.asm"
+    even
     INCLUDE "includes/data_strings.asm"
+
+    even
+
+   ; Configuration menu layouts (soft DIPs)
+ JPConfig:
+    dc.b    "VORTEX MULTICART"                            ; Game name
+    dc.b    $FF,$FF,$FF,$FF,$FF,$FF                       ; Special list
+    dc.b    $02,$00,$00,$00,$00,$00,$00,$00,$00,$00       ; Option list
+    dc.b    "ITEM ON PAGE"
+    dc.b    "7           "
+    dc.b    "14          "
+
+ USConfig:
+    dc.b    "VORTEX MULTICART"                            ; Game name
+    dc.b    $FF,$FF,$FF,$FF,$FF,$FF                       ; Special list
+    dc.b    $02,$00,$00,$00,$00,$00,$00,$00,$00,$00       ; Option list
+    dc.b    "ITEM ON PAGE"
+    dc.b    "7           "
+    dc.b    "14          "
+
+    even 
 
 gameLaunchInstructions:
     dc.b    $33,$C0,$00,$2C,$0F,$EE         ; move.w  d0, $2c0fee.l
