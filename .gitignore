@@ -24,6 +24,7 @@ _copy.bat
 /MAME/castool.exe
 /MAME/chdman.exe
 /MAME/COPYING
+/MAME/cfg/*
 /MAME/ctrlr/*
 /MAME/dir.txt
 /MAME/docs/*
