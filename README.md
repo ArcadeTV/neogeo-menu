@@ -16,11 +16,6 @@
 
 This aims to be an alternative menu for the chinese 161in1 multicart that was fully reverse engineered by vortex in 2023.
 
-## Pending:
-
-- [ ] Automated gamelist processing
-- [ ] Test on real hardware
-
 ---
 
 ## Building
@@ -34,23 +29,29 @@ When everything works as expected you'll find the `menu-p1.bin` romfile in the `
 
 Although this was made to be used on real hardware, you can run it in MAME:
 
+### The easy way:
+
+1. Add a MAME executable to the MAME folder and run `emu.bat` after `build.bat`
+
+### In your own MAME folder:
+
 1. Run `build.bat`
 2. Open `MAME\hash\neogeo.xml` from this repository in any text editor and copy the element `<software name="menu">` till `</software>` into the `neogeo.xml` from your MAME folder.
-3. copy `MAME\roms\menu` (where the roms are located) to your MAME setup.
+3. copy the folder `MAME\roms\menu` (where the roms are located) to your MAME setup.
 4. Open a commandline terminal in your MAME folder and run MAME like this: `mame.exe neogeo -cart1 menu` or `mame.exe neogeo -cart1 menu -debug` if you want debugging features.
 
 ---
 
 ## How to Play
 
-|    Control | Function                     |
-| ---------: | :--------------------------- |
-|         Up | former list index            |
-|       Down | next list index              |
-|       Left | previous page                |
-|      Right | next page                    |
-|          D | toggle game infos            |
-| A or Start | launch (not yet implemented) |
+| Control | Function          |
+| ------: | :---------------- |
+|      Up | former list index |
+|    Down | next list index   |
+|    Left | previous page     |
+|   Right | next page         |
+|       D | toggle game infos |
+|       A | launch games      |
 
 ---
 
