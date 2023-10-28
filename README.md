@@ -44,14 +44,16 @@ Although this was made to be used on real hardware, you can run it in MAME:
 
 ## How to Play
 
-| Control | Function          |
-| ------: | :---------------- |
-|      Up | former list index |
-|    Down | next list index   |
-|    Left | previous page     |
-|   Right | next page         |
-|       D | toggle game infos |
-|       A | launch games      |
+| Control | Function             |
+| ------: | :------------------- |
+|      Up | former list index    |
+|    Down | next list index      |
+|    Left | previous page        |
+|   Right | next page            |
+|       A | launch games         |
+|       B | toggle game infos    |
+|       C | unused               |
+|       D | toggle credit screen |
 
 ---
 
