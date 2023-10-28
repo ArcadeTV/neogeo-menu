@@ -5,7 +5,7 @@
 ;
 ; ArcadeTV
 ; // Created: 2023/10/13 09:41:53
-; // Last modified: 2023/10/26 19:42:59
+; // Last modified: 2023/10/28 09:26:51
 ; ############################################################################################################
 
     INCLUDE "includes/regdefs.asm"
@@ -15,7 +15,7 @@
     INCLUDE "includes/system.asm"
     INCLUDE "includes/palettes.asm"
 
-    ;jsr     Logo 
+    ;jsr     Credits 
     ;bra     .loop
 
 ; RENDER LIST ON STARTUP: -------------------

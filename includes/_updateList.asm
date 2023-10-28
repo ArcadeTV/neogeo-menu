@@ -1,6 +1,16 @@
 updateList:
     movem.l d0-d7/a0-a6,-(a7)
     
+    move.b  RAM_CreditsMode,d0
+    tst.b   d0 
+    bne     .showCredits
+    jsr     renderGUI
+    bra     .doUpdateList
+.showCredits
+    jsr     Credits
+    bra     .doNotUpdateList
+
+.doUpdateList:
     jsr     saveListValues
     jsr     removeArrows
     jsr     renderArrow

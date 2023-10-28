@@ -68,20 +68,15 @@ Game:                                       ; Label defined in the jump table
     nop
     dbra    d7,.clearspr                    ; Are we done ? No: jump back to .clearspr
 
-    move.l  #(40*32)-1,d7                   ; Clear the whole map
-    move.w  #FIXMAP,REG_VRAMADDR
-    move.w  #$0120,d0                       ; Use tile $FF
-.clearfix:
-    move.w  d0,REG_VRAMRW                   ; Write to VRAM
-    nop                                     ; Wait a bit...
-    nop
-    dbra    d7,.clearfix                    ; Are we done ? No: jump back to .clearfix
+    jsr     clrFix
 
     ; INIT MENU VARS
     move.b  #CurrentIndex,RAM_CurrentIndex
     move.b  #CurrentPage,RAM_CurrentPage
     move.b  #CurrentListPos,RAM_CurrentListPos
     move.b  #CurrentListPosR,RAM_CurrentListPosR
+    move.b  #0,RAM_ListMode
+    move.b  #0,RAM_CreditsMode
 
     ; copy game-launch instructions to RAM:
     

@@ -9,6 +9,10 @@ readControllerInputs:
     beq     .noa
     nop                                     ; A pressed
 
+    move.b  RAM_CreditsMode,d0
+    tst.b   d0 
+    bne     .nopress_leaveCredits
+
     jmp     GAMELAUNCH                      ; Launch the selected game!
 
 
@@ -17,24 +21,45 @@ readControllerInputs:
     beq     .nob
     nop                                     ; B pressed
 
+    move.b  RAM_CreditsMode,d0
+    tst.b   d0 
+    bne     .nopress_leaveCredits
+
+    move.b  RAM_ListMode,d0
+    not.b   d0                              ; toggle 0 and 1 by inverting the byte
+    move.b  d0,RAM_ListMode
+    jsr     updateList
+
 .nob:
     btst.b  #CNT_C,p1_Repeat
     beq     .noc
     nop                                     ; C pressed
 
+    move.b  RAM_CreditsMode,d0
+    tst.b   d0 
+    bne     .nopress_leaveCredits
+
 .noc:
     btst.b  #CNT_D,p1_Current
     beq     .nod
     nop                                     ; D pressed
-    move.b  RAM_ListMode,d0
+
+    move.b  RAM_CreditsMode,d0
     not.b   d0                              ; toggle 0 and 1 by inverting the byte
-    move.b  d0,RAM_ListMode
+    move.b  d0,RAM_CreditsMode
+    tst.b   d0 
+    beq     .nopress_leaveCredits
     jsr     updateList
     
 .nod:
     btst.b  #CNT_UP,p1_Repeat
     beq     .noup
     nop                                     ; UP pressed
+
+    move.b  RAM_CreditsMode,d0
+    tst.b   d0 
+    bne     .nopress_leaveCredits
+
     move.b  RAM_CurrentIndex,d0
     tst.b   d0
     beq.w   .setIndexToLast
@@ -50,6 +75,11 @@ readControllerInputs:
     btst.b  #CNT_DOWN,p1_Repeat
     beq     .nodown
     nop                                     ; DOWN pressed
+
+    move.b  RAM_CreditsMode,d0
+    tst.b   d0 
+    bne     .nopress_leaveCredits
+
     move.b  RAM_CurrentIndex,d0
     cmp.b   #GamesCount-1,d0
     beq.w   .setIndexToFirst
@@ -65,6 +95,11 @@ readControllerInputs:
     btst.b  #CNT_LEFT,p1_Repeat
     beq.w   .noleft
     nop                                     ; LEFT pressed
+
+    move.b  RAM_CreditsMode,d0
+    tst.b   d0 
+    bne     .nopress_leaveCredits
+
 ;
 ;------------------
     move.b  #TotalPages,d0                  ; 
@@ -108,6 +143,11 @@ readControllerInputs:
     btst.b  #CNT_RIGHT,p1_Repeat
     beq     .noright
     nop                                     ; RIGHT pressed
+
+    move.b  RAM_CreditsMode,d0
+    tst.b   d0 
+    bne     .nopress_leaveCredits
+
 ;-------------------------
     move.b  #TotalPages,d0 
     cmp.b   #1,d0 
@@ -161,7 +201,11 @@ readControllerInputs:
     
 .nopress:
     rts
-
+.nopress_leaveCredits:
+    move.b  #0,RAM_CreditsMode
+    jsr     clrFix 
+    jsr     updateList
+    rts
 
 UpdateIOMirrors:
 	move.b	d0,REG_DIPSW		; kick watchdog

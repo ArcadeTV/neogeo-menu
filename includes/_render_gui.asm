@@ -44,8 +44,8 @@ renderStaticStrings:
     rts
 
 
-Logo:
-    move.l  #$3280,d0                       ; tiles from address $280 in S ROM, use palette #3
+Credits:
+    move.l  #$3BA0,d0                       ; tiles from address $BA0 in S ROM, use palette #3
     move.l  #28-1,d2                        ; height: 28 tiles = 224px
     move.l  #$7002,d3                       ; initial upper left position in fixmap
     nop
@@ -63,4 +63,17 @@ Logo:
     dbra    d2,.writeLogoColumns
 .writeLogo_complete:
 
+    rts
+
+clrFix:
+    move.l  #(40*32)-1,d7                   ; Clear the whole map
+    move.w  #1,REG_VRAMMOD                  ; Set the VRAM address auto-increment value
+    move.w  #FIXMAP,REG_VRAMADDR
+    move.w  #$20,d0                         ; Use blank tile
+.clearfix:
+    move.w  d0,REG_VRAMRW                   ; Write to VRAM
+    nop                                     ; Wait a bit...
+    nop
+    move.b  d0,REG_DIPSW                    ; Watchdog
+    dbra    d7,.clearfix                    ; Are we done ? No: jump back to .clearfix
     rts
