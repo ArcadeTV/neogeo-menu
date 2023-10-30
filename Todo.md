@@ -5,6 +5,7 @@
 ### Testing
 
 - [ ] Test Pick'n'Mix
+- [ ] Test Unibios Cheats
 - [ ] Test Unibios settings for console
 - [ ] Test list in different region settings
 
