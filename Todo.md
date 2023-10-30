@@ -25,3 +25,9 @@
 
 - [ ] Add detailed instructions for the whole process to convert a cart
 - [ ] Add ClrMAMEpro DAT for all workings roms
+
+### Unibios Features (needs research)
+
+ - [ ] Reboot to menu option
+ - [ ] Alter table for Pick'n'Mix indexes in Unibios (eventually generate a table in menu rom and mark it so that the unibios can find it)
+ - [ ] Bug with Neo Geo logo sprite that occurs when the EyeCatcher flag is set to 1 or 2.
