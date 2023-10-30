@@ -31,7 +31,10 @@ Although this was made to be used on real hardware, you can run it in MAME:
 
 ### The easy way:
 
-1. Add a MAME executable to the MAME folder and run `emu.bat` after `build.bat`
+1. Add a MAME executable to the MAME folder 
+2. Add a bios (neogeo.zip) to MAME/roms 
+3. Run `build.bat`
+4. Run `emu.bat` or `debug.bat` to launch MAME
 
 ### In your own MAME folder:
 
