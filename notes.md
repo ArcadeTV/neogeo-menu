@@ -1,3 +1,5 @@
+# Menu
+
 Chinese Menu checks for button inputs and sets 0|1 flag in
 $108104 to $108107 (RAM).
 Game-launch is then starting from $FF000 (ROM)
@@ -63,3 +65,26 @@ sub_ff246_end:
 100208: reset                               ; trigger a reset in the M68K
 10020A: jmp     $c00402.l                   ; jump to "Reset Exception Vector" (same as ROM:00000004)
 ```
+
+---
+
+# Vortex Custom Cart
+
+I'm assuming there are several versions of the V3 cart. Pick-n-mix works for some, but not for others.
+
+As for my custom cart - I've made several menu edits relative to the original dump:
+- I changed the procedure for switching ROMs (it was more convenient for me)
+- I removed (did not add) the return procedure for each game in order to preserve the original game code and checksum.
+- I removed all interaction with the MCU. This includes last game saves and software dip-switches.
+If you need and interested in this functionality, you will need to do a few things yourself:
+- provide the bsram file containing the default bsram data for each game;
+- implement interaction with MCU in the menu;
+- (most important) implement interaction with MCU in CPLD.
+
+---
+
+# Unibios 4.0
+
+Disable bios integrity check:
+
+0x11C62: 66 00 00 E2 -> 4E 71 4E 71 (nop nop)

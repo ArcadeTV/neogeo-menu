@@ -1,0 +1,1719 @@
+C1E2CA: subi.w  #$f8, D1
+C1E2CE: bne     $c1e2bc
+C1E2BC: move.b  D0, $300001.l
+C1E2C2: move.w  $3c0006.l, D1
+C1E2C8: lsr.w   #7, D1
+C1E2CA: subi.w  #$f8, D1
+C1E2CE: bne     $c1e2bc
+C1E2BC: move.b  D0, $300001.l
+C1E2C2: move.w  $3c0006.l, D1
+C1E2C8: lsr.w   #7, D1
+
+   (loops for 872 instructions)
+
+C1E2D0: rts
+C1DFFE: bsr     $c1dfe0
+C1DFE0: move.b  D0, $300001.l
+C1DFE6: move.b  $300000.l, D0
+C1DFEC: cmpi.b  #$3, $10fd94.l
+C1DFF4: bne     $c1dff8
+C1DFF8: rts
+C1E000: cmpi.b  #$3, $10fd94.l
+C1E008: bne     $c1dff8
+C1DFF8: rts
+C1E648: move.b  D0, D1
+C1E64A: not.b   D1
+C1E64C: bne     $c1e660
+C1E64E: moveq   #$0, D4
+C1E650: addq.w  #1, D2
+C1E652: cmpi.w  #$543e, D2
+C1E656: bne     $c1e644
+C1E644: bsr     $c1dffa
+C1DFFA: bsr     $c1e2bc
+
+   (loops for 5 instructions)
+
+C1E2D0: rts
+C1DFFE: bsr     $c1dfe0
+C1DFE0: move.b  D0, $300001.l
+C1DFE6: move.b  $300000.l, D0
+C1DFEC: cmpi.b  #$3, $10fd94.l
+C1DFF4: bne     $c1dff8
+
+   (loops for 1 instructions)
+
+C1E000: cmpi.b  #$3, $10fd94.l
+C1E008: bne     $c1dff8
+
+   (loops for 1 instructions)
+
+C1E648: move.b  D0, D1
+C1E64A: not.b   D1
+C1E64C: bne     $c1e660
+C1E64E: moveq   #$0, D4
+C1E650: addq.w  #1, D2
+C1E652: cmpi.w  #$543e, D2
+C1E656: bne     $c1e644
+C1E644: bsr     $c1dffa
+C1DFFA: bsr     $c1e2bc
+
+   (loops for 1332974 instructions)
+
+C1E660: btst    #$1, D0
+C1E664: beq     $c1e6be
+C1E666: btst    #$0, D0
+C1E66A: beq     $c1e6e4
+C1E66C: btst    #$4, D0
+C1E670: beq     $c1e7d2
+C1E7D2: lea     ($a,PC) ; ($c1e7de), A0
+C1E7D6: lsl.w   #2, D6
+C1E7D8: adda.l  D6, A0
+C1E7DA: movea.l (A0), A0
+C1E7DC: jmp     (A0)
+C1E7EE: tst.w   D5
+C1E7F0: bne     $c1e7f8
+C1E7F2: jmp     $c05050.l
+C05050: bra     $c059a2
+C059A2: bsr     $c059e6
+C059E6: moveq   #$1, D0
+C059E8: bsr     $c059f0
+C059F0: move.b  D0, $320000.l
+C059F6: move.w  #$40, D1
+C059FA: bsr     $c05e2c
+C05E2C: move.w  #$400, D0
+C05E30: dbra    D0, $c05e30
+C05E30: dbra    D0, $c05e30
+
+   (loops for 1023 instructions)
+
+C05E34: move.b  D0, $300001.l
+C05E3A: dbra    D1, $c05e2c
+C05E2C: move.w  #$400, D0
+
+   (loops for 1025 instructions)
+
+C05E34: move.b  D0, $300001.l
+C05E3A: dbra    D1, $c05e2c
+
+   (loops for 64764 instructions)
+
+C05E3E: rts
+C059FE: rts
+C059EA: moveq   #$1, D0
+C059EC: bsr     $c059f0
+C059F0: move.b  D0, $320000.l
+C059F6: move.w  #$40, D1
+C059FA: bsr     $c05e2c
+
+   (loops for 66820 instructions)
+
+C05E3E: rts
+C059FE: rts
+C059EE: moveq   #$3, D0
+
+   (loops for 66825 instructions)
+
+C059A4: moveq   #$0, D0
+C059A6: btst    #$2, $10fe35.l
+C059AE: beq     $c059c0
+C059C0: move.w  D0, $10fe38.l
+C059C6: tst.l   $c00500.l
+C059CC: bne     $c059e0
+C059CE: movea.l #$10f300, A5
+C059D4: lea     $10f300.l, A7
+C059DA: jmp     $c196a8.l
+C196A8: jsr     $c1bac0.l
+C1BAC0: btst    #$2, $10fe35.l
+C1BAC8: bne     $c1bad2
+C1BACA: move.b  $300001.l, D0
+C1BAD0: rts
+C196AE: andi.b  #$1, D0
+C196B2: bne     $c196dc
+C196DC: jmp     $c1bbc0.l
+C1BBC0: jsr     $c13a3c.l
+C13A3C: addq.b  #1, ($ac2,A5)
+C13A40: move.l  #$10ff00, ($abe,A5)
+C13A48: lea     $3c0002.l, A1
+C13A4E: move.w  #$1, ($2,A1)
+C13A54: move.w  #$20, D0
+C13A58: move.w  #$7000, (-$2,A1)
+C13A5E: move.w  #$4ff, D7
+C13A62: move.b  D0, $300001.l
+C13A68: move.w  D0, (A1)
+C13A6A: dbra    D7, $c13a62
+C13A62: move.b  D0, $300001.l
+C13A68: move.w  D0, (A1)
+C13A6A: dbra    D7, $c13a62
+
+   (loops for 3834 instructions)
+
+C13A6E: subq.b  #1, ($ac2,A5)
+C13A72: rts
+C1BBC6: jmp     $c11002.l           ; SOFT RESET
+C11002: move    #$2700, SR
+C11006: move.b  D0, $300001.l
+C1100C: move.w  #$7, $3c000c.l
+C11014: move.w  #$4000, $3c0006.l
+C1101C: lea     $10f300.l, A5
+C11022: jmp     $c11a84.l
+C11A84: move.b  #$ff, $380031.l
+C11A8C: bsr     $c184f0
+C184F0: bsr     $c184f8
+C184F8: bsr     $c18500
+C18500: nop
+C18502: nop
+C18504: nop
+C18506: nop
+C18508: nop
+C1850A: nop
+C1850C: rts
+C184FC: bsr     $c18500
+C18500: nop
+C18502: nop
+C18504: nop
+C18506: nop
+C18508: nop
+C1850A: nop
+C1850C: rts
+
+   (loops for 7 instructions)
+
+C184F4: bsr     $c18500
+
+   (loops for 7 instructions)
+
+C184F8: bsr     $c18500
+
+   (loops for 7 instructions)
+
+C184FC: bsr     $c18500
+
+   (loops for 14 instructions)
+
+C11A90: move.b  #$ff, $380041.l
+C11A98: move.b  #$f7, $380031.l
+C11AA0: bsr     $c184f0
+C184F0: bsr     $c184f8
+
+   (loops for 23 instructions)
+
+C184F4: bsr     $c18500
+
+   (loops for 30 instructions)
+
+C11AA4: move.b  #$ff, $380031.l
+C11AAC: bsr     $c184f0
+
+   (loops for 55 instructions)
+
+C11AB0: move.b  #$ef, $380031.l
+C11AB8: bsr     $c184f0
+
+   (loops for 55 instructions)
+
+C11ABC: move.b  #$ff, $380031.l
+C11AC4: bsr     $c184f0
+
+   (loops for 55 instructions)
+
+C11AC8: move.b  #$df, $380031.l
+C11AD0: bsr     $c184f0
+
+   (loops for 55 instructions)
+
+C11AD4: move.b  #$ff, $380031.l
+C11ADC: move.b  D0, $3a0003.l
+C11AE2: move.b  D0, $3a000b.l
+C11AE8: move.b  D0, $380065.l
+C11AEE: move.b  D0, $380067.l
+C11AF4: moveq   #$0, D6
+C11AF6: jsr     $c1bb6a.l
+C1BB6A: lea     $400000.l, A1
+C1BB70: bsr     $c1bcaa
+C1BCAA: jmp     $c050f6.l
+C050F6: bra     $c05792
+C05792: moveq   #$0, D0
+C05794: move.l  D0, D2
+C05796: move.l  D0, D3
+C05798: move.b  D0, $3a000f.l
+C0579E: lea     $402000.l, A0
+C057A4: bsr     $c057d0
+C057D0: bsr     $c0996e
+C0996E: move.b  D0, $300001.l
+C09974: move.w  $3c0006.l, D1
+C0997A: lsr.w   #7, D1
+C0997C: subi.w  #$f8, D1
+C09980: bne     $c0996e
+C0996E: move.b  D0, $300001.l
+C09974: move.w  $3c0006.l, D1
+C0997A: lsr.w   #7, D1
+C0997C: subi.w  #$f8, D1
+C09980: bne     $c0996e
+
+   (loops for 12610 instructions)
+
+C09982: rts
+C057D4: move.l  D0, D1
+C057D6: bsr     $c057de
+C057DE: moveq   #$3f, D5
+C057E0: movem.l D0-D3, -(A0)
+C057E4: movem.l D0-D3, -(A0)
+C057E8: movem.l D0-D3, -(A0)
+C057EC: movem.l D0-D3, -(A0)
+C057F0: dbra    D5, $c057e0
+C057E0: movem.l D0-D3, -(A0)
+C057E4: movem.l D0-D3, -(A0)
+C057E8: movem.l D0-D3, -(A0)
+C057EC: movem.l D0-D3, -(A0)
+C057F0: dbra    D5, $c057e0
+
+   (loops for 310 instructions)
+
+C057F4: rts
+C057D8: bsr     $c0996e
+
+   (loops for 13700 instructions)
+
+C09982: rts
+C057DC: move.l  D0, D1
+C057DE: moveq   #$3f, D5
+
+   (loops for 320 instructions)
+
+C057F4: rts
+C057A6: movem.l D0-D7/A1-A5, -(A7)
+C057AA: lea     $10f300.l, A5
+C057B0: jsr     $c13a3c.l
+C13A3C: addq.b  #1, ($ac2,A5)
+C13A40: move.l  #$10ff00, ($abe,A5)
+C13A48: lea     $3c0002.l, A1
+C13A4E: move.w  #$1, ($2,A1)
+C13A54: move.w  #$20, D0
+C13A58: move.w  #$7000, (-$2,A1)
+C13A5E: move.w  #$4ff, D7
+C13A62: move.b  D0, $300001.l
+C13A68: move.w  D0, (A1)
+C13A6A: dbra    D7, $c13a62
+C13A62: move.b  D0, $300001.l
+C13A68: move.w  D0, (A1)
+C13A6A: dbra    D7, $c13a62
+
+   (loops for 3834 instructions)
+
+C13A6E: subq.b  #1, ($ac2,A5)
+C13A72: rts
+C057B6: movem.l (A7)+, D0-D7/A1-A5
+C057BA: bsr     $c0996e
+
+   (loops for 10566 instructions)
+
+C057BE: move.b  D0, $3a001f.l
+C057C4: move.l  D0, ($2,A0)
+C057C8: lea     $402000.l, A0
+C057CE: bra     $c057d4
+C057D4: move.l  D0, D1
+C057D6: bsr     $c057de
+
+   (loops for 322 instructions)
+
+C057D8: bsr     $c0996e
+
+   (loops for 13696 instructions)
+
+C057DC: move.l  D0, D1
+
+   (loops for 322 instructions)
+
+C1BB74: bsr     $c1df38
+C1DF38: move.w  #$1, $3c0004.l
+C1DF40: move.w  #$0, $3c0000.l
+C1DF48: moveq   #$0, D0
+C1DF4A: move.w  #$6fff, D1
+C1DF4E: bsr     $c1df8a
+C1DF8A: move.w  D0, $3c0002.l
+C1DF90: dbra    D1, $c1df8a
+C1DF8A: move.w  D0, $3c0002.l
+C1DF90: dbra    D1, $c1df8a
+
+   (loops for 57340 instructions)
+
+C1DF94: rts
+C1DF50: move.w  #$8000, $3c0000.l
+C1DF58: move.w  #$fff, D0
+C1DF5C: move.w  #$1ff, D1
+C1DF60: bsr     $c1df8a
+
+   (loops for 1024 instructions)
+
+C1DF94: rts
+C1DF62: move.w  #$8200, $3c0000.l
+C1DF6A: moveq   #$0, D0
+C1DF6C: move.w  #$1ff, D1
+C1DF70: bsr     $c1df8a
+
+   (loops for 1025 instructions)
+
+C1DF72: move.w  #$1ff, D1
+C1DF76: move.w  #$1, $3c0004.l
+C1DF7E: move.w  #$8400, $3c0000.l
+C1DF86: move.w  #$be00, D0
+
+   (loops for 1025 instructions)
+
+C1BB78: bsr     $c1ddb8
+C1DDB8: move.w  D2, -(A7)
+C1DDBA: move.w  #$ff, D2
+C1DDBE: move.w  #$7000, $3c0000.l
+C1DDC6: move.w  #$1, $3c0004.l
+C1DDCE: move.b  D0, $300001.l
+C1DDD4: move.w  #$27, D0
+C1DDD8: move.w  #$1f, D1
+C1DDDC: move.w  D2, $3c0002.l
+C1DDE2: dbra    D1, $c1dddc
+C1DDDC: move.w  D2, $3c0002.l
+C1DDE2: dbra    D1, $c1dddc
+
+   (loops for 60 instructions)
+
+C1DDE6: dbra    D0, $c1ddd8
+C1DDD8: move.w  #$1f, D1
+
+   (loops for 64 instructions)
+
+C1DDE6: dbra    D0, $c1ddd8
+
+   (loops for 2508 instructions)
+
+C1DDEA: move.w  (A7)+, D2
+C1DDEC: rts
+C1BB7C: bsr     $c1dc34
+C1DC34: lea     $10fe30.l, A1
+C1DC3A: move.b  $320001.l, D0
+C1DC40: move.b  D0, D1
+C1DC42: andi.b  #$18, D0
+C1DC46: bne     $c1dc8a
+C1DC8A: move.l  $d00010.l, D0
+C1DC90: cmpi.l  #$4241434b, D0
+C1DC96: beq     $c1dc9e
+C1DC9E: cmpi.w  #$5632, (A1)
+C1DCA2: beq     $c1dc88
+C1DC88: rts
+C1BB80: lea     $100000.l, A0
+C1BB86: rts
+C11AFC: move.w  #$7fff, D5
+C11B00: jmp     $c1ba10.l
+C1BA10: cmpi.w  #$7654, $10fe38.l
+C1BA18: beq     $c1ba68
+C1BA1A: btst    #$0, $10fe34.l
+C1BA22: bne     $c1ba44
+C1BA24: bra     $c1bcd0
+C1BCD0: bsr     $c1e2bc
+C1E2BC: move.b  D0, $300001.l
+C1E2C2: move.w  $3c0006.l, D1
+C1E2C8: lsr.w   #7, D1
+C1E2CA: subi.w  #$f8, D1
+C1E2CE: bne     $c1e2bc
+C1E2BC: move.b  D0, $300001.l
+C1E2C2: move.w  $3c0006.l, D1
+C1E2C8: lsr.w   #7, D1
+C1E2CA: subi.w  #$f8, D1
+C1E2CE: bne     $c1e2bc
+
+   (loops for 13025 instructions)
+
+C1E2D0: rts
+C1BCD4: lea     $10fe30.l, A3
+C1BCDA: movem.l (A3)+, D2-D4
+C1BCDE: lea     ($4,A3), A3
+C1BCE2: lea     $401fe0.l, A4
+C1BCE8: move.l  (A3)+, (A4)+
+C1BCEA: move.l  (A3)+, (A4)+
+C1BCEC: move.l  (A3)+, (A4)+
+C1BCEE: move.l  (A3)+, (A4)+
+C1BCF0: jsr     $c13134.l
+C13134: lea     $300001.l, A2
+C1313A: movea.l (A7)+, A6
+C1313C: movea.l A0, A1
+C1313E: move.w  #$5555, D0
+C13142: move.w  D5, D7
+C13144: move.b  D0, (A2)
+C13146: move.w  D0, (A0)+
+C13148: dbra    D7, $c13144
+C13144: move.b  D0, (A2)
+C13146: move.w  D0, (A0)+
+C13148: dbra    D7, $c13144
+
+   (loops for 98298 instructions)
+
+C1314C: movea.l A1, A0
+C1314E: move.w  D5, D7
+C13150: move.b  D0, (A2)
+C13152: move.w  (A0), D1
+C13154: cmp.w   D0, D1
+C13156: bne     $c16ada
+C1315A: addq.l  #2, A0
+C1315C: dbra    D7, $c13150
+C13150: move.b  D0, (A2)
+C13152: move.w  (A0), D1
+C13154: cmp.w   D0, D1
+C13156: bne     $c16ada
+C1315A: addq.l  #2, A0
+C1315C: dbra    D7, $c13150
+
+   (loops for 196596 instructions)
+
+C13160: movea.l A1, A0
+C13162: move.w  #$aaaa, D0
+C13166: move.w  D5, D7
+C13168: move.b  D0, (A2)
+C1316A: move.w  D0, (A0)+
+C1316C: dbra    D7, $c13168
+C13168: move.b  D0, (A2)
+C1316A: move.w  D0, (A0)+
+C1316C: dbra    D7, $c13168
+
+   (loops for 98298 instructions)
+
+C13170: movea.l A1, A0
+C13172: move.w  D5, D7
+C13174: move.b  D0, (A2)
+C13176: move.w  (A0), D1
+C13178: cmp.w   D0, D1
+C1317A: bne     $c16ada
+C1317E: addq.l  #2, A0
+C13180: dbra    D7, $c13174
+C13174: move.b  D0, (A2)
+C13176: move.w  (A0), D1
+C13178: cmp.w   D0, D1
+C1317A: bne     $c16ada
+C1317E: addq.l  #2, A0
+C13180: dbra    D7, $c13174
+
+   (loops for 196596 instructions)
+
+C13184: movea.l A1, A0
+C13186: move.w  D5, D7
+C13188: move.b  D0, (A2)
+C1318A: move.w  A0, D0
+C1318C: move.w  D0, (A0)+
+C1318E: dbra    D7, $c13188
+C13188: move.b  D0, (A2)
+C1318A: move.w  A0, D0
+C1318C: move.w  D0, (A0)+
+C1318E: dbra    D7, $c13188
+
+   (loops for 131064 instructions)
+
+C13192: movea.l A1, A0
+C13194: move.w  D5, D7
+C13196: move.b  D0, (A2)
+C13198: move.w  A0, D0
+C1319A: move.w  (A0), D1
+C1319C: cmp.w   D0, D1
+C1319E: bne     $c16ada
+C131A2: addq.l  #2, A0
+C131A4: dbra    D7, $c13196
+C13196: move.b  D0, (A2)
+C13198: move.w  A0, D0
+C1319A: move.w  (A0), D1
+C1319C: cmp.w   D0, D1
+C1319E: bne     $c16ada
+C131A2: addq.l  #2, A0
+C131A4: dbra    D7, $c13196
+
+   (loops for 229362 instructions)
+
+C131A8: jmp     (A6)
+C1BCF6: bsr     $c1e2bc
+C1E2BC: move.b  D0, $300001.l
+C1E2C2: move.w  $3c0006.l, D1
+C1E2C8: lsr.w   #7, D1
+C1E2CA: subi.w  #$f8, D1
+C1E2CE: bne     $c1e2bc
+C1E2BC: move.b  D0, $300001.l
+C1E2C2: move.w  $3c0006.l, D1
+C1E2C8: lsr.w   #7, D1
+C1E2CA: subi.w  #$f8, D1
+C1E2CE: bne     $c1e2bc
+
+   (loops for 12405 instructions)
+
+C1E2D0: rts
+C1BCFA: move.l  -(A4), -(A3)
+C1BCFC: move.l  -(A4), -(A3)
+C1BCFE: move.l  -(A4), -(A3)
+C1BD00: move.l  -(A4), -(A3)
+C1BD02: lea     $10fe3c.l, A3
+C1BD08: movem.l D2-D4, -(A3)
+C1BD0C: bra     $c1ba28
+C1BA28: move.b  D0, $3a001d.l
+C1BA2E: btst    #$2, $10fe35.l
+C1BA36: bne     $c1ba3e
+C1BA38: jmp     $c11b0a.l
+C11B0A: addq.b  #1, D6
+C11B0C: lea     $d00000.l, A0
+C11B12: jsr     ($ab4,PC) ; ($c125c8)
+C125C8: jsr     $c1bac0.l
+C1BAC0: btst    #$2, $10fe35.l
+C1BAC8: bne     $c1bad2
+C1BACA: move.b  $300001.l, D0
+C1BAD0: rts
+C125CE: beq     $c125e6
+C125D0: lea     $d00010.l, A6
+C125D6: lea     (-$20,PC) ; ($c125b8), A4
+C125DA: moveq   #$f, D7
+C125DC: cmpm.b  (A4)+, (A6)+
+C125DE: bne     $c125e6
+C125E0: dbra    D7, $c125dc
+C125DC: cmpm.b  (A4)+, (A6)+
+C125DE: bne     $c125e6
+C125E0: dbra    D7, $c125dc
+
+   (loops for 42 instructions)
+
+C125E4: rts
+C11B16: moveq   #$2, D6
+C11B18: lea     $400000.l, A0
+C11B1E: move.w  #$fff, D5
+C11B22: move.b  D0, $3a001f.l
+C11B28: jsr     ($160a,PC) ; ($c13134)
+C13134: lea     $300001.l, A2
+C1313A: movea.l (A7)+, A6
+C1313C: movea.l A0, A1
+C1313E: move.w  #$5555, D0
+C13142: move.w  D5, D7
+C13144: move.b  D0, (A2)
+C13146: move.w  D0, (A0)+
+C13148: dbra    D7, $c13144
+C13144: move.b  D0, (A2)
+C13146: move.w  D0, (A0)+
+C13148: dbra    D7, $c13144
+
+   (loops for 12282 instructions)
+
+C1314C: movea.l A1, A0
+C1314E: move.w  D5, D7
+C13150: move.b  D0, (A2)
+C13152: move.w  (A0), D1
+C13154: cmp.w   D0, D1
+C13156: bne     $c16ada
+C1315A: addq.l  #2, A0
+C1315C: dbra    D7, $c13150
+C13150: move.b  D0, (A2)
+C13152: move.w  (A0), D1
+C13154: cmp.w   D0, D1
+C13156: bne     $c16ada
+C1315A: addq.l  #2, A0
+C1315C: dbra    D7, $c13150
+
+   (loops for 24564 instructions)
+
+C13160: movea.l A1, A0
+C13162: move.w  #$aaaa, D0
+C13166: move.w  D5, D7
+C13168: move.b  D0, (A2)
+C1316A: move.w  D0, (A0)+
+C1316C: dbra    D7, $c13168
+C13168: move.b  D0, (A2)
+C1316A: move.w  D0, (A0)+
+C1316C: dbra    D7, $c13168
+
+   (loops for 12282 instructions)
+
+C13170: movea.l A1, A0
+C13172: move.w  D5, D7
+C13174: move.b  D0, (A2)
+C13176: move.w  (A0), D1
+C13178: cmp.w   D0, D1
+C1317A: bne     $c16ada
+C1317E: addq.l  #2, A0
+C13180: dbra    D7, $c13174
+C13174: move.b  D0, (A2)
+C13176: move.w  (A0), D1
+C13178: cmp.w   D0, D1
+C1317A: bne     $c16ada
+C1317E: addq.l  #2, A0
+C13180: dbra    D7, $c13174
+
+   (loops for 24564 instructions)
+
+C13184: movea.l A1, A0
+C13186: move.w  D5, D7
+C13188: move.b  D0, (A2)
+C1318A: move.w  A0, D0
+C1318C: move.w  D0, (A0)+
+C1318E: dbra    D7, $c13188
+C13188: move.b  D0, (A2)
+C1318A: move.w  A0, D0
+C1318C: move.w  D0, (A0)+
+C1318E: dbra    D7, $c13188
+
+   (loops for 16376 instructions)
+
+C13192: movea.l A1, A0
+C13194: move.w  D5, D7
+C13196: move.b  D0, (A2)
+C13198: move.w  A0, D0
+C1319A: move.w  (A0), D1
+C1319C: cmp.w   D0, D1
+C1319E: bne     $c16ada
+C131A2: addq.l  #2, A0
+C131A4: dbra    D7, $c13196
+C13196: move.b  D0, (A2)
+C13198: move.w  A0, D0
+C1319A: move.w  (A0), D1
+C1319C: cmp.w   D0, D1
+C1319E: bne     $c16ada
+C131A2: addq.l  #2, A0
+C131A4: dbra    D7, $c13196
+
+   (loops for 28658 instructions)
+
+C131A8: jmp     (A6)
+C11B2C: addq.b  #1, D6
+C11B2E: lea     $400000.l, A0
+C11B34: move.b  D0, $3a000f.l
+C11B3A: jsr     ($15f8,PC) ; ($c13134)
+C13134: lea     $300001.l, A2
+C1313A: movea.l (A7)+, A6
+C1313C: movea.l A0, A1
+C1313E: move.w  #$5555, D0
+C13142: move.w  D5, D7
+C13144: move.b  D0, (A2)
+C13146: move.w  D0, (A0)+
+C13148: dbra    D7, $c13144
+C13144: move.b  D0, (A2)
+C13146: move.w  D0, (A0)+
+C13148: dbra    D7, $c13144
+
+   (loops for 12282 instructions)
+
+C1314C: movea.l A1, A0
+C1314E: move.w  D5, D7
+C13150: move.b  D0, (A2)
+C13152: move.w  (A0), D1
+C13154: cmp.w   D0, D1
+C13156: bne     $c16ada
+C1315A: addq.l  #2, A0
+C1315C: dbra    D7, $c13150
+C13150: move.b  D0, (A2)
+C13152: move.w  (A0), D1
+C13154: cmp.w   D0, D1
+C13156: bne     $c16ada
+C1315A: addq.l  #2, A0
+C1315C: dbra    D7, $c13150
+
+   (loops for 24564 instructions)
+
+C13160: movea.l A1, A0
+C13162: move.w  #$aaaa, D0
+C13166: move.w  D5, D7
+C13168: move.b  D0, (A2)
+C1316A: move.w  D0, (A0)+
+C1316C: dbra    D7, $c13168
+C13168: move.b  D0, (A2)
+C1316A: move.w  D0, (A0)+
+C1316C: dbra    D7, $c13168
+
+   (loops for 12282 instructions)
+
+C13170: movea.l A1, A0
+C13172: move.w  D5, D7
+C13174: move.b  D0, (A2)
+C13176: move.w  (A0), D1
+C13178: cmp.w   D0, D1
+C1317A: bne     $c16ada
+C1317E: addq.l  #2, A0
+C13180: dbra    D7, $c13174
+C13174: move.b  D0, (A2)
+C13176: move.w  (A0), D1
+C13178: cmp.w   D0, D1
+C1317A: bne     $c16ada
+C1317E: addq.l  #2, A0
+C13180: dbra    D7, $c13174
+
+   (loops for 24564 instructions)
+
+C13184: movea.l A1, A0
+C13186: move.w  D5, D7
+C13188: move.b  D0, (A2)
+C1318A: move.w  A0, D0
+C1318C: move.w  D0, (A0)+
+C1318E: dbra    D7, $c13188
+C13188: move.b  D0, (A2)
+C1318A: move.w  A0, D0
+C1318C: move.w  D0, (A0)+
+C1318E: dbra    D7, $c13188
+
+   (loops for 16376 instructions)
+
+C13192: movea.l A1, A0
+C13194: move.w  D5, D7
+C13196: move.b  D0, (A2)
+C13198: move.w  A0, D0
+C1319A: move.w  (A0), D1
+C1319C: cmp.w   D0, D1
+C1319E: bne     $c16ada
+C131A2: addq.l  #2, A0
+C131A4: dbra    D7, $c13196
+C13196: move.b  D0, (A2)
+C13198: move.w  A0, D0
+C1319A: move.w  (A0), D1
+C1319C: cmp.w   D0, D1
+C1319E: bne     $c16ada
+C131A2: addq.l  #2, A0
+C131A4: dbra    D7, $c13196
+
+   (loops for 28658 instructions)
+
+C131A8: jmp     (A6)
+C11B3E: jsr     $c1bcaa.l
+C1BCAA: jmp     $c050f6.l
+C050F6: bra     $c05792
+C05792: moveq   #$0, D0
+C05794: move.l  D0, D2
+C05796: move.l  D0, D3
+C05798: move.b  D0, $3a000f.l
+C0579E: lea     $402000.l, A0
+C057A4: bsr     $c057d0
+C057D0: bsr     $c0996e
+C0996E: move.b  D0, $300001.l
+C09974: move.w  $3c0006.l, D1
+C0997A: lsr.w   #7, D1
+C0997C: subi.w  #$f8, D1
+C09980: bne     $c0996e
+C0996E: move.b  D0, $300001.l
+C09974: move.w  $3c0006.l, D1
+C0997A: lsr.w   #7, D1
+C0997C: subi.w  #$f8, D1
+C09980: bne     $c0996e
+
+   (loops for 6625 instructions)
+
+C09982: rts
+C057D4: move.l  D0, D1
+C057D6: bsr     $c057de
+C057DE: moveq   #$3f, D5
+C057E0: movem.l D0-D3, -(A0)
+C057E4: movem.l D0-D3, -(A0)
+C057E8: movem.l D0-D3, -(A0)
+C057EC: movem.l D0-D3, -(A0)
+C057F0: dbra    D5, $c057e0
+C057E0: movem.l D0-D3, -(A0)
+C057E4: movem.l D0-D3, -(A0)
+C057E8: movem.l D0-D3, -(A0)
+C057EC: movem.l D0-D3, -(A0)
+C057F0: dbra    D5, $c057e0
+
+   (loops for 310 instructions)
+
+C057F4: rts
+C057D8: bsr     $c0996e
+
+   (loops for 13695 instructions)
+
+C09982: rts
+C057DC: move.l  D0, D1
+C057DE: moveq   #$3f, D5
+
+   (loops for 320 instructions)
+
+C057F4: rts
+C057A6: movem.l D0-D7/A1-A5, -(A7)
+C057AA: lea     $10f300.l, A5
+C057B0: jsr     $c13a3c.l
+C13A3C: addq.b  #1, ($ac2,A5)
+C13A40: move.l  #$10ff00, ($abe,A5)
+C13A48: lea     $3c0002.l, A1
+C13A4E: move.w  #$1, ($2,A1)
+C13A54: move.w  #$20, D0
+C13A58: move.w  #$7000, (-$2,A1)
+C13A5E: move.w  #$4ff, D7
+C13A62: move.b  D0, $300001.l
+C13A68: move.w  D0, (A1)
+C13A6A: dbra    D7, $c13a62
+C13A62: move.b  D0, $300001.l
+C13A68: move.w  D0, (A1)
+C13A6A: dbra    D7, $c13a62
+
+   (loops for 3834 instructions)
+
+C13A6E: subq.b  #1, ($ac2,A5)
+C13A72: rts
+C057B6: movem.l (A7)+, D0-D7/A1-A5
+C057BA: bsr     $c0996e
+
+   (loops for 10566 instructions)
+
+C057BE: move.b  D0, $3a001f.l
+C057C4: move.l  D0, ($2,A0)
+C057C8: lea     $402000.l, A0
+C057CE: bra     $c057d4
+C057D4: move.l  D0, D1
+C057D6: bsr     $c057de
+
+   (loops for 322 instructions)
+
+C057D8: bsr     $c0996e
+
+   (loops for 13696 instructions)
+
+C057DC: move.l  D0, D1
+
+   (loops for 322 instructions)
+
+C11B44: addq.b  #1, D6
+C11B46: lea     $3c0002.l, A1
+C11B4C: move.w  #$1, ($2,A1)
+C11B52: moveq   #$0, D4
+C11B54: move.w  #$7fff, D5
+C11B58: jsr     ($1550,PC) ; ($c130aa)
+C130AA: move.w  D4, (-$2,A1)
+C130AE: move.w  #$5555, D0
+C130B2: move.w  D5, D7
+C130B4: move.w  D0, (A1)
+C130B6: move.b  D0, (A2)
+C130B8: dbra    D7, $c130b4
+C130B4: move.w  D0, (A1)
+C130B6: move.b  D0, (A2)
+C130B8: dbra    D7, $c130b4
+
+   (loops for 98298 instructions)
+
+C130BC: move.w  D4, (-$2,A1)
+C130C0: movea.l D4, A0
+C130C2: move.w  D5, D7
+C130C4: move.b  D0, (A2)
+C130C6: move.w  (A1), D1
+C130C8: move.w  D1, (A1)
+C130CA: cmp.w   D0, D1
+C130CC: bne     $c16ada
+C130D0: addq.l  #1, A0
+C130D2: dbra    D7, $c130c4
+C130C4: move.b  D0, (A2)
+C130C6: move.w  (A1), D1
+C130C8: move.w  D1, (A1)
+C130CA: cmp.w   D0, D1
+C130CC: bne     $c16ada
+C130D0: addq.l  #1, A0
+C130D2: dbra    D7, $c130c4
+
+   (loops for 229362 instructions)
+
+C130D6: move.w  D4, (-$2,A1)
+C130DA: move.w  #$aaaa, D0
+C130DE: move.w  D5, D7
+C130E0: move.w  D0, (A1)
+C130E2: move.b  D0, (A2)
+C130E4: dbra    D7, $c130e0
+C130E0: move.w  D0, (A1)
+C130E2: move.b  D0, (A2)
+C130E4: dbra    D7, $c130e0
+
+   (loops for 98298 instructions)
+
+C130E8: move.w  D4, (-$2,A1)
+C130EC: movea.l D4, A0
+C130EE: move.w  D5, D7
+C130F0: move.b  D0, (A2)
+C130F2: move.w  (A1), D1
+C130F4: move.w  D1, (A1)
+C130F6: cmp.w   D0, D1
+C130F8: bne     $c16ada
+C130FC: addq.l  #1, A0
+C130FE: dbra    D7, $c130f0
+C130F0: move.b  D0, (A2)
+C130F2: move.w  (A1), D1
+C130F4: move.w  D1, (A1)
+C130F6: cmp.w   D0, D1
+C130F8: bne     $c16ada
+C130FC: addq.l  #1, A0
+C130FE: dbra    D7, $c130f0
+
+   (loops for 229362 instructions)
+
+C13102: move.w  D4, (-$2,A1)
+C13106: moveq   #$0, D0
+C13108: move.w  D5, D7
+C1310A: move.b  D0, (A2)
+C1310C: move.w  D0, (A1)
+C1310E: addq.w  #1, D0
+C13110: dbra    D7, $c1310a
+C1310A: move.b  D0, (A2)
+C1310C: move.w  D0, (A1)
+C1310E: addq.w  #1, D0
+C13110: dbra    D7, $c1310a
+
+   (loops for 131064 instructions)
+
+C13114: move.w  D4, (-$2,A1)
+C13118: movea.l D4, A0
+C1311A: moveq   #$0, D0
+C1311C: move.w  D5, D7
+C1311E: move.b  D0, (A2)
+C13120: move.w  (A1), D1
+C13122: move.w  D1, (A1)
+C13124: cmp.w   D0, D1
+C13126: bne     $c16ada
+C1312A: addq.l  #1, A0
+C1312C: addq.w  #1, D0
+C1312E: dbra    D7, $c1311e
+C1311E: move.b  D0, (A2)
+C13120: move.w  (A1), D1
+C13122: move.w  D1, (A1)
+C13124: cmp.w   D0, D1
+C13126: bne     $c16ada
+C1312A: addq.l  #1, A0
+C1312C: addq.w  #1, D0
+C1312E: dbra    D7, $c1311e
+
+   (loops for 262128 instructions)
+
+C13132: rts
+C11B5C: move.l  #$8000, D4
+C11B62: move.w  #$5ff, D5
+C11B66: jsr     ($1542,PC) ; ($c130aa)
+C130AA: move.w  D4, (-$2,A1)
+C130AE: move.w  #$5555, D0
+C130B2: move.w  D5, D7
+C130B4: move.w  D0, (A1)
+C130B6: move.b  D0, (A2)
+C130B8: dbra    D7, $c130b4
+C130B4: move.w  D0, (A1)
+C130B6: move.b  D0, (A2)
+C130B8: dbra    D7, $c130b4
+
+   (loops for 4602 instructions)
+
+C130BC: move.w  D4, (-$2,A1)
+C130C0: movea.l D4, A0
+C130C2: move.w  D5, D7
+C130C4: move.b  D0, (A2)
+C130C6: move.w  (A1), D1
+C130C8: move.w  D1, (A1)
+C130CA: cmp.w   D0, D1
+C130CC: bne     $c16ada
+C130D0: addq.l  #1, A0
+C130D2: dbra    D7, $c130c4
+C130C4: move.b  D0, (A2)
+C130C6: move.w  (A1), D1
+C130C8: move.w  D1, (A1)
+C130CA: cmp.w   D0, D1
+C130CC: bne     $c16ada
+C130D0: addq.l  #1, A0
+C130D2: dbra    D7, $c130c4
+
+   (loops for 10738 instructions)
+
+C130D6: move.w  D4, (-$2,A1)
+C130DA: move.w  #$aaaa, D0
+C130DE: move.w  D5, D7
+C130E0: move.w  D0, (A1)
+C130E2: move.b  D0, (A2)
+C130E4: dbra    D7, $c130e0
+C130E0: move.w  D0, (A1)
+C130E2: move.b  D0, (A2)
+C130E4: dbra    D7, $c130e0
+
+   (loops for 4602 instructions)
+
+C130E8: move.w  D4, (-$2,A1)
+C130EC: movea.l D4, A0
+C130EE: move.w  D5, D7
+C130F0: move.b  D0, (A2)
+C130F2: move.w  (A1), D1
+C130F4: move.w  D1, (A1)
+C130F6: cmp.w   D0, D1
+C130F8: bne     $c16ada
+C130FC: addq.l  #1, A0
+C130FE: dbra    D7, $c130f0
+C130F0: move.b  D0, (A2)
+C130F2: move.w  (A1), D1
+C130F4: move.w  D1, (A1)
+C130F6: cmp.w   D0, D1
+C130F8: bne     $c16ada
+C130FC: addq.l  #1, A0
+C130FE: dbra    D7, $c130f0
+
+   (loops for 10738 instructions)
+
+C13102: move.w  D4, (-$2,A1)
+C13106: moveq   #$0, D0
+C13108: move.w  D5, D7
+C1310A: move.b  D0, (A2)
+C1310C: move.w  D0, (A1)
+C1310E: addq.w  #1, D0
+C13110: dbra    D7, $c1310a
+C1310A: move.b  D0, (A2)
+C1310C: move.w  D0, (A1)
+C1310E: addq.w  #1, D0
+C13110: dbra    D7, $c1310a
+
+   (loops for 6136 instructions)
+
+C13114: move.w  D4, (-$2,A1)
+C13118: movea.l D4, A0
+C1311A: moveq   #$0, D0
+C1311C: move.w  D5, D7
+C1311E: move.b  D0, (A2)
+C13120: move.w  (A1), D1
+C13122: move.w  D1, (A1)
+C13124: cmp.w   D0, D1
+C13126: bne     $c16ada
+C1312A: addq.l  #1, A0
+C1312C: addq.w  #1, D0
+C1312E: dbra    D7, $c1311e
+C1311E: move.b  D0, (A2)
+C13120: move.w  (A1), D1
+C13122: move.w  D1, (A1)
+C13124: cmp.w   D0, D1
+C13126: bne     $c16ada
+C1312A: addq.l  #1, A0
+C1312C: addq.w  #1, D0
+C1312E: dbra    D7, $c1311e
+
+   (loops for 12272 instructions)
+
+C13132: rts
+C11B6A: move.b  D0, $3a000d.l
+C11B70: jsr     $c1bac0.l
+C1BAC0: btst    #$2, $10fe35.l
+C1BAC8: bne     $c1bad2
+C1BACA: move.b  $300001.l, D0
+C1BAD0: rts
+C11B76: bne     $c11bd6
+C11BD6: jmp     $c1bb20.l
+C1BB20: btst    #$2, $10fe35.l
+C1BB28: bne     $c1bb42
+C1BB2A: btst    #$0, $10fe34.l
+C1BB32: bne     $c1bb42
+C1BB34: moveq   #$8, D0
+C1BB36: jsr     $c12d6c.l
+C12D6C: moveq   #$3, D7
+C12D6E: move.b  D0, D1
+C12D70: andi.b  #$1, D1
+C12D74: jsr     ($3a,PC) ; ($c12db0)
+C12DB0: move.b  D1, $380051.l
+C12DB6: rts
+C12D78: ori.b   #$2, D1
+C12D7C: jsr     ($32,PC) ; ($c12db0)
+C12DB0: move.b  D1, $380051.l
+C12DB6: rts
+C12D80: eori.b  #$2, D1
+C12D84: jsr     ($2a,PC) ; ($c12db0)
+
+   (loops for 2 instructions)
+
+C12D88: lsr.b   #1, D0
+C12D8A: dbra    D7, $c12d6e
+C12D6E: move.b  D0, D1
+C12D70: andi.b  #$1, D1
+C12D74: jsr     ($3a,PC) ; ($c12db0)
+
+   (loops for 2 instructions)
+
+C12D78: ori.b   #$2, D1
+C12D7C: jsr     ($32,PC) ; ($c12db0)
+
+   (loops for 2 instructions)
+
+C12D80: eori.b  #$2, D1
+C12D84: jsr     ($2a,PC) ; ($c12db0)
+
+   (loops for 2 instructions)
+
+C12D88: lsr.b   #1, D0
+C12D8A: dbra    D7, $c12d6e
+
+   (loops for 30 instructions)
+
+C12D8E: move.b  #$4, D1
+C12D92: jsr     ($1c,PC) ; ($c12db0)
+
+   (loops for 2 instructions)
+
+C12D96: moveq   #$0, D1
+C12D98: jsr     ($16,PC) ; ($c12db0)
+
+   (loops for 2 instructions)
+
+C12D9C: rts
+C1BB3C: jmp     $c11bdc.l
+C11BDC: move.b  #$40, D0
+C11BE0: jsr     ($1b2,PC) ; ($c11d94)
+C11D94: move.l  #$20000, D3
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+
+   (loops for 688492 instructions)
+
+C11DAE: rts
+C11BE4: clr.b   $10fee4.l
+C11BEA: move.b  #$1, $10fee3.l
+C11BF2: move    #$2000, SR
+
+   (interrupted at C11BF6, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+C11BF6: jsr     ($19c,PC) ; ($c11d94)
+C11D94: move.l  #$20000, D3
+
+   (loops for 6812 instructions)
+   (interrupted at C04F22, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 6 instructions)
+
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+
+   (loops for 23192 instructions)
+   (interrupted at C04F22, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 23226 instructions)
+   (interrupted at C04F22, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 6 instructions)
+
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+
+   (loops for 23192 instructions)
+   (interrupted at C04F22, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 23226 instructions)
+   (interrupted at C04F22, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 6 instructions)
+
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+
+   (loops for 23193 instructions)
+   (interrupted at C11DA2, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 23226 instructions)
+   (interrupted at C11DA2, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 5 instructions)
+
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+
+   (loops for 23193 instructions)
+   (interrupted at C11DA2, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 23226 instructions)
+   (interrupted at C11DA2, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 5 instructions)
+
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+
+   (loops for 23193 instructions)
+   (interrupted at C11DA2, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 23227 instructions)
+   (interrupted at C11DA4, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 4 instructions)
+
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+
+   (loops for 23195 instructions)
+   (interrupted at C11DA6, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 23228 instructions)
+   (interrupted at C11DAC, IRQ 1)
+
+C00438: jmp     $c01fb0.l
+C01FB0: bsr     $c01f80
+C01F80: cmpi.w  #$4, $10fe2e.l
+C01F88: beq     $c01fa8
+C01F8A: move.w  $10fe32.l, $10fd82.l
+C01F94: cmpi.w  #$7070, $10fe82.l
+C01F9C: bne     $c01fa8
+C01FA8: jmp     $c04408.l
+C04408: bra     $c0487a
+C0487A: btst    #$7, $10fe35.l
+C04882: beq     $c048ac
+C048AC: rts
+C01FB2: jmp     $c11646.l
+C11646: move.w  #$4, $3c000c.l
+C1164E: move.b  D0, $300001.l
+C11654: tst.b   $10fee3.l
+C1165A: bne     $c11672
+C11672: addq.b  #1, $10fee4.l
+C11678: rte
+
+   (loops for 1 instructions)
+
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a
+C11D9A: move.b  D0, D2
+C11D9C: jmp     $c04a44.l
+C04A44: bra     $c04f0e
+C04F0E: move.b  D0, $300001.l
+C04F14: subq.l  #1, D3
+C04F16: tst.l   D3
+C04F18: bne     $c04f1c
+C04F1C: move.b  $320001.l, D0
+C04F22: jmp     $c11da2.l
+C11DA2: move.b  D0, D1
+C11DA4: eor.b   D1, D2
+C11DA6: and.b   D1, D2
+C11DA8: andi.b  #$40, D2
+C11DAC: beq     $c11d9a

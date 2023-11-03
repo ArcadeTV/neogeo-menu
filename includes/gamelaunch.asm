@@ -1,5 +1,5 @@
 GAMELAUNCH:
-    move    #$2700, SR                      ; disable Interrupts
+    move    #$2700,SR                       ; disable Interrupts
 
     rept 20
     nop                                     ; 20 nops
