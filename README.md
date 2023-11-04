@@ -14,7 +14,7 @@
 
 ---
 
-This aims to be an alternative menu for the chinese 161in1 multicart that was fully reverse engineered by vortex in 2023.
+_This aims to be an alternative menu for a modded chinese 161in1 v3 multicart that was fully reverse engineered by vortex in 2023._
 
 ---
 
@@ -62,13 +62,13 @@ Although this was made to be used on real hardware, you can run it in MAME:
 
 ## Gamelist
 
-The list-entries in the rom come from `gamelist.asm`. 
-It has several sections to store data that has relations to other data.
-The order if your gameslist and the roms you flashed to your ICs need to match. Please double check the ordering!
+The list-entries in the rom come from the `gamelist.asm` file which is included upon building the rom. It has several sections to store data that has relations to other data, such as MEG-count, release year, publisher and category.
 
-You can generate both `gameslist.asm` and `games.txt` dynamically from my [generator](https://ngmenu.arcade-tv.de).
+[!] The order of your gameslist and the roms you flashed to your ICs need to match. **Please double check the ordering!**
 
-Just follow the instructions on the page.
+You can generate both `gameslist.asm` and `games.txt` dynamically from my [generator](https://ngmenu.arcade-tv.de). Just follow the instructions on the page.
+
+_This is not about any "Master List" or Homebrew-Conversions - it's a cart with flash-roms that can hold any software the system is capable of (some mapper limitations apply), so please do not see my Google Sheet as "This must be on your cart", but as a template for the correct format to get your own folder-contents into a) a gameslist.asm for building the custom menu and b) the games.txt for the vortex compiler that packs your roms into big binaries for programming your chips. The Google Sheet could as well be empty, but then you would have to fill all the meta data yourself._
 
 ---
 
