@@ -64,17 +64,11 @@ Although this was made to be used on real hardware, you can run it in MAME:
 
 The list-entries in the rom come from `gamelist.asm`. 
 It has several sections to store data that has relations to other data.
-Also there are 2 sets of data, the latter is suffixed with `_j`, that is because the menu shows different lists depending on the region that is set either in your system or unibios.
+The order if your gameslist and the roms you flashed to your ICs need to match. Please double check the ordering!
 
-To make it work with vortex' compiler there will some kind of automation in the future.
-As of today I generate it dynamically from this [google sheet](https://docs.google.com/spreadsheets/d/1SvTqueoCBW6DWAlXX2c7Bu-1nL3tjjF4dnOUXxzvHcQ/edit?usp=sharing).
+You can generate both `gameslist.asm` and `games.txt` dynamically from my [generator](https://ngmenu.arcade-tv.de).
 
-- You can open the sheet in your browser and make a copy from the menu.
-- Make sure your sheet is publically available.
-- Copy the ID of your sheet from the URL (between `https://docs.google.com/spreadsheets/d/` and the next slash `/`)
-- Go to [https://ngmenu.arcade-tv.de/](https://ngmenu.arcade-tv.de/) and fill your sheet ID in the textfield, then click `generate gameslist.asm`
-- Copy the generated text and replace the contents of your gamelist.asm
-- Build the ROM with the provided `build.bat`
+Just follow the instructions on the page.
 
 ---
 
@@ -85,5 +79,4 @@ As of today I generate it dynamically from this [google sheet](https://docs.goog
 | List Entry | 32             |
 |  Game Info | 22             |
 |       Megs | 3              |
-|        NGH | 4              |
 
