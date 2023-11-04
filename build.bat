@@ -5,7 +5,7 @@ REM ----------------------------------------------------------------------------
 REM NG_MENU // build.bat
 REM ArcadeTV
 REM // Created: 2023/10/13 10:19:32
-REM // Last modified: 2023/10/21 21:01:08
+REM // Last modified: 2023/11/04 21:12:42
 REM -------------------------------------------------------------------------------------------------
 
 CLS
@@ -76,6 +76,11 @@ echo Pad the source ROM to !NEWSIZE! bytes>>.\tmp\build.log
 
 echo byteswap>>.\tmp\build.log
 .\_tools\flip.exe .\MAME\roms\menu\!OUTFILE! .\MAME\roms\menu\!OUTFILE!>>.\tmp\build.log
+
+
+REM -----------------------------------------------------------------------------------------------
+REM Create Darksoft formatted rom
+copy .\MAME\roms\menu\!OUTFILE! .\vortex\prom
 
 
 REM -----------------------------------------------------------------------------------------------

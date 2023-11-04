@@ -12,6 +12,7 @@
 # Repository
 *.bak
 /_archive/*
+/vortex/prom
 /tmp
 /MAME/hash/neogeo.xml
 /MAME/roms/menu/*
