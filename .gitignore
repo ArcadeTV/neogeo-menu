@@ -10,6 +10,7 @@
 ._*
 
 # Repository
+gameslist.asm
 *.bak
 /_archive/*
 /vortex/prom
