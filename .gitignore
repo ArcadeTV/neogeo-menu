@@ -14,7 +14,7 @@
 /_archive/*
 /vortex/prom
 /tmp
-/MAME/hash/neogeo.xml
+!/MAME/hash/_neogeo.xml
 /MAME/roms/menu/*
 !/MAME/roms/menu/menu-c1.bin
 !/MAME/roms/menu/menu-c2.bin
