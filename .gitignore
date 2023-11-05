@@ -14,6 +14,7 @@
 /_archive/*
 /vortex/prom
 /tmp
+/MAME/hash/*
 !/MAME/hash/_neogeo.xml
 /MAME/roms/menu/*
 !/MAME/roms/menu/menu-c1.bin
@@ -38,7 +39,6 @@ _copy.bat
 /MAME/dir.txt
 /MAME/docs/*
 /MAME/floptool.exe
-/MAME/hash/*
 /MAME/hlsl/*
 /MAME/imgtool.exe
 /MAME/ini/*
