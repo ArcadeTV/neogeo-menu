@@ -16,6 +16,8 @@
 
 _This aims to be an alternative menu for a modded chinese 161in1 v3 multicart that was fully reverse engineered by vortex in 2023._
 
+Please see this [flowchart](https://raw.githubusercontent.com/ArcadeTV/neogeo-menu/main/161in1v3_mod_flowchart.pdf), it outlines the process of modding a cartridge. A full writeup with all the details is currently not available.
+
 ---
 
 ## Building
