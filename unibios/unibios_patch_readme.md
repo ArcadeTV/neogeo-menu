@@ -4,13 +4,15 @@
 |     |  _|  _| .'| . | -_| | | |  |  |
 |__|__|_| |___|__,|___|___| |_|  \___/ 
 ```
-# BackToMenu Patch for UNIBIOS 4.0 
+# BackToMenu Patch for UNIBIOS 4.0 (unusable)
 
 - UNIBIOS created by [Razoola](http://unibios.free.fr)
 
 ---
 
 This aims to bring back a "Back To Menu" option for the custom 161in1 cart based on the work of VORTEX.
+
+**Important** Due to a protection any edited version of the Unibios will crash at some point. There are already efforts to bring this feature to the CPLD on the cart.
 
 ---
 
