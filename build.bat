@@ -5,7 +5,7 @@ REM ----------------------------------------------------------------------------
 REM NG_MENU // build.bat
 REM ArcadeTV
 REM // Created: 2023/10/13 10:19:32
-REM // Last modified: 2023/11/04 21:12:42
+REM // Last modified: 2023/11/11 03:38:25
 REM -------------------------------------------------------------------------------------------------
 
 CLS
@@ -15,6 +15,12 @@ REM SETTINGS: Change these according to your needs:
 
 set PADTO=8
 set OUTFILE=menu-p1.bin
+
+
+REM --
+REM Check Requirements
+if not exist ".\gameslist.asm" echo gameslist.asm not found. Aborting. 
+if not exist ".\gameslist.asm" exit /b
 
 
 REM -----------------------------------------------------------------------------------------------
