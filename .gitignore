@@ -11,10 +11,10 @@
 
 # Repository
 gameslist.asm
-*.bak
 /_archive/*
-/vortex/prom
+/copy_to_vortex_repo
 /tmp
+*.bak
 /MAME/hash/*
 !/MAME/hash/_neogeo.xml
 /MAME/roms/menu/*

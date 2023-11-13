@@ -5,7 +5,7 @@ REM ----------------------------------------------------------------------------
 REM NG_MENU // build.bat
 REM ArcadeTV
 REM // Created: 2023/10/13 10:19:32
-REM // Last modified: 2023/11/11 03:38:25
+REM // Last modified: 2023/11/13 12:55:43
 REM -------------------------------------------------------------------------------------------------
 
 CLS
@@ -47,6 +47,8 @@ REM ----------------------------------------------------------------------------
 REM Create folders if they do not exist
 
 if not exist ".\tmp" mkdir ".\tmp"
+if exist ".\copy_to_vortex_repo" DEL /Q ".\copy_to_vortex_repo\*.*"
+if not exist ".\copy_to_vortex_repo" mkdir ".\copy_to_vortex_repo"
 
 
 REM -----------------------------------------------------------------------------------------------
@@ -85,9 +87,13 @@ echo byteswap>>.\tmp\build.log
 
 
 REM -----------------------------------------------------------------------------------------------
-REM Create Darksoft formatted rom
-copy .\MAME\roms\menu\!OUTFILE! .\vortex\prom
+REM Create Darksoft formatted roms for vortex repository
 
+copy .\MAME\roms\menu\!OUTFILE! .\copy_to_vortex_repo\prom>>.\tmp\build.log
+copy .\MAME\roms\menu\menu-m1.bin .\copy_to_vortex_repo\m1rom>>.\tmp\build.log
+copy .\MAME\roms\menu\menu-s1.bin .\copy_to_vortex_repo\srom>>.\tmp\build.log
+copy /b .\MAME\roms\menu\menu-v1.bin+.\MAME\roms\menu\menu-v2.bin .\copy_to_vortex_repo\vroma0>>.\tmp\build.log
+.\_tools\cromcombiner.exe .\MAME\roms\menu\menu-c1.bin .\MAME\roms\menu\menu-c2.bin .\copy_to_vortex_repo\crom0
 
 REM -----------------------------------------------------------------------------------------------
 REM create MAME xml file
@@ -98,8 +104,7 @@ REM ----------------------------------------------------------------------------
 REM Finished
 
 echo -END OF LOG->>.\tmp\build.log
-echo Done. Created !OUTFILE!
-echo ROM was padded to %PADTO% MBit.
+echo Done. Files are in folder copy_to_vortex_repo.
 exit /b
 
 
