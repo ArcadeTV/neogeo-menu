@@ -22,8 +22,13 @@ Please see this [flowchart](https://raw.githubusercontent.com/ArcadeTV/neogeo-me
 
 ## Building
 
+**Requirements:**
+- Windows x64
+- All files from this repository incl. the `_tools` folder
+- A gameslist.asm file (see details below)
+
 On Windows use the `build.bat` file to start the toolchain.
-When everything works as expected you'll find the `menu-p1.bin` romfile in the `MAME\roms\menu` folder.
+When everything works as expected you'll find the roms ready for the modded 161in1 V3 in the `copy_to_vortex_repo` folder.
 
 ---
 
