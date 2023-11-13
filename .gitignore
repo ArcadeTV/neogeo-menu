@@ -13,6 +13,7 @@
 gameslist.asm
 /_archive/*
 /copy_to_vortex_repo
+/vortex
 /tmp
 *.bak
 /MAME/hash/*
