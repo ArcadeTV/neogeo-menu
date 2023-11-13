@@ -67,9 +67,9 @@ Although this was made to be used on real hardware, you can run it in MAME:
 
 ---
 
-## Gamelist
+## Gameslist
 
-The list-entries in the rom come from the `gamelist.asm` file which is included upon building the rom. It has several sections to store data that has relations to other data, such as MEG-count, release year, publisher and category.
+The list-entries in the rom come from the `gameslist.asm` file which is included upon building the rom. It has several sections to store data that has relations to other data, such as MEG-count, release year, publisher and category.
 
 [!] The order of your gameslist and the roms you flashed to your ICs need to match. **Please double check the ordering!**
 
