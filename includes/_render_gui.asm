@@ -6,7 +6,7 @@ renderGUI:
     move.l  #POS_LINE_TOP,d6                ; start position in fix map for upper line
     move.w  d6,REG_VRAMADDR                 ; Set the position (address in fix map)
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
-    move.w  #$054F,d0                       ; set line tile $54F in D0
+    move.w  #$554F,d0                       ; set line tile $54F in D0
 .writeUpperLine:
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
@@ -16,7 +16,7 @@ renderGUI:
     move.l  #POS_LINE_BOTTOM,d6             ; start position in fix map for upper line
     move.w  d6,REG_VRAMADDR                 ; Set the position (address in fix map)
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
-    move.w  #$054F,d0                       ; set line tile $54F in D0
+    move.w  #$554F,d0                       ; set line tile $54F in D0
 .writeLowerLine:
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
@@ -29,7 +29,7 @@ renderStaticStrings:
     move.l  #POS_PAGE_STR,d6                ; initial start-to-write position in fix map
     lea     Str_Page,a0                     ; Load the text's address in A0
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
-    move.w  #$0000,d0                       ; tiles from address $0 in S ROM
+    move.w  #$6000,d0                       ; tiles from address $0 in S ROM
     nop
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
 .writeStr_Page:
@@ -45,7 +45,7 @@ renderStaticStrings:
 
 
 Credits:
-    move.l  #$3BA0,d0                       ; tiles from address $BA0 in S ROM, use palette #3
+    move.l  #$8BA0,d0                       ; tiles from address $BA0 in S ROM, use palette #3
     move.l  #28-1,d2                        ; height: 28 tiles = 224px
     move.l  #$7002,d3                       ; initial upper left position in fixmap
     nop

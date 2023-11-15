@@ -1,18 +1,19 @@
-# Menu
+# Notes
+
+## Menu
 
 Chinese Menu checks for button inputs and sets 0|1 flag in
 $108104 to $108107 (RAM).
 Game-launch is then starting from $FF000 (ROM)
 
-```
+```text
 0E036C: jmp     $ff000.l
 0FF000: move    #$2700, SR  ; disable Interrupts
 ```
 
-
 Complete instructions for game launch on chinese menu:
 
-```
+```text
 loc_000E0372:
 0E0372: movem.l (sp)+,d0-d7/a0-a6           ; restore registers
 0E0376: rte                                 ; return from exception
@@ -68,31 +69,34 @@ sub_ff246_end:
 
 ---
 
-# Vortex Custom Cart
+## Vortex Custom Cart
 
 I'm assuming there are several versions of the V3 cart. Pick-n-mix works for some, but not for others.
 
 As for my custom cart - I've made several menu edits relative to the original dump:
+
 - I changed the procedure for switching ROMs (it was more convenient for me)
 - I removed (did not add) the return procedure for each game in order to preserve the original game code and checksum.
 - I removed all interaction with the MCU. This includes last game saves and software dip-switches.
+
 If you need and interested in this functionality, you will need to do a few things yourself:
+
 - provide the bsram file containing the default bsram data for each game;
 - implement interaction with MCU in the menu;
 - (most important) implement interaction with MCU in CPLD.
 
 ---
 
-# UNIBIOS COLORS
+## UNIBIOS COLORS
 
-| Color | P.RAM   | Intstuction | P.No. | Col.Idx. |
-| :---- | :------ | :---------- | :---: | :------: |
-| $0EEE | $400022 | PC=00C097A4 |   1   |    1     |
-| $0111 | $400024 | PC=00C09780 |   1   |    1     |
-| $0A96 | $400042 | PC=00C097B2 |   2   |    2     |
-| $0111 | $400044 | PC=00C09784 |   2   |    2     |
-| $0402 | $400062 | PC=00C09772 |   3   |    3     |
-| $0111 | $400064 | PC=00C09788 |   3   |    3     |
-| $0555 | $400082 | PC=00C09798 |   4   |    4     |
-| $0111 | $400084 | PC=00C0978C |   4   |    4     |
-| $0100 | $40008A | PC=00C097B6 |   4   |    4     |
+| Color | P.RAM   | P.No. | Col.Idx. |
+| :---- | :------ | :---: | :------: |
+| $0EEE | $400022 |   1   |    2     |
+| $0111 | $400024 |   1   |    3     |
+| $0A96 | $400042 |   2   |    2     |
+| $0111 | $400044 |   2   |    3     |
+| $0402 | $400062 |   3   |    2     |
+| $0111 | $400064 |   3   |    3     |
+| $0555 | $400082 |   4   |    2     |
+| $0111 | $400084 |   4   |    3     |
+| $0100 | $40008A |   4   |    6     |

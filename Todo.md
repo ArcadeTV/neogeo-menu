@@ -4,10 +4,8 @@
 
 ### Testing
 
-- [x] Test Pick'n'Mix (result: will not work)
 - [ ] Test Unibios Cheats
-- [ ] Test Unibios settings for console
-- [ ] Test list in different region settings
+- [ ] Test Unibios settings (system and region)
 
 ### Features (maybe)
 
@@ -20,7 +18,7 @@
 
 ### Compiler
 
-- [ ] Change source to make use of C and V roms of menu
+- [x] Change source to make use of C and V roms of menu (done by ManCloud)
 
 ### Repository
 
@@ -29,6 +27,4 @@
 
 ### Unibios Features (needs research)
 
- - [x] Reboot to menu option
- - [x] Alter table for Pick'n'Mix indexes in Unibios (eventually generate a table in menu rom and mark it so that the unibios can find it) (result: not aplicable)
  - [x] Bug with Neo Geo logo sprite that occurs when the EyeCatcher flag is set to 1 or 2. (confirmed)

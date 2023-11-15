@@ -69,13 +69,13 @@ renderArrow:
 
     ; upper arrow ---------------------------
     move.w  d6,REG_VRAMADDR                 ; Set the position (address in fix map)
-    move.w  #$2111,d0                       ; set tile $111, palette #2 in D0
+    move.w  #$7111,d0                       ; set tile $111, palette #2 in D0
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
     ; lower arrow ---------------------------
     add.l   #1,d6                           ; start position in fix map for upper arrow
     move.w  d6,REG_VRAMADDR                 ; Set the position (address in fix map)
-    move.w  #$2211,d0                       ; set tile $211, palette #2 in D0
+    move.w  #$7211,d0                       ; set tile $211, palette #2 in D0
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
     move.b  d0,REG_DIPSW                    ; Watchdog
@@ -92,7 +92,7 @@ updatePageNumber:
     lea     Str_Numbers2,a0                  ; Load the text's address in A0
     add.l	d1,a0                           ; offset
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
-    move.w  #$0000,d0                       ; tiles from address $0 in S ROM
+    move.w  #$6000,d0                       ; tiles from address $0 in S ROM
     nop
     move.l  #1,d2                           ; we need to loop for 2 iterations (2-1)=1
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
@@ -115,7 +115,7 @@ updateTotalPagesNumber:
     lea     Str_Numbers2,a0                  ; Load the text's address in A0
     add.l	d1,a0                           ; offset
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
-    move.w  #$0000,d0                       ; tiles from address $0 in S ROM
+    move.w  #$6000,d0                       ; tiles from address $0 in S ROM
     nop
     move.l  #1,d2                           ; we need to loop for 2 iterations (2-1)=1
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
@@ -156,22 +156,22 @@ updateGameInfo:
     
     ; show GameInfos
     lea     GameInfosTable,a0               ; Load the text's table address in A0
-    move.w  #$007B,d1                       ; put copyright-sign tile in d1 for writing 1st letter in letter in line
+    move.w  #$607B,d1                       ; put copyright-sign tile in d1 for writing 1st letter in letter in line
     bra.w   .listMode_was_checked
 
 .showGameCategories:
     ; show Game Categories
-    move.w  #$0020,d1                       ; put blank tile in d1 for writing 1st letter in letter in line
+    move.w  #$6020,d1                       ; put blank tile in d1 for writing 1st letter in letter in line
     lea     CategoriesTable,a0              ; Load the text's table address in A0
 
 .listMode_was_checked:
     movea.l (a0,d0),a0
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
-    move.w  #$0000,d0                       ; tiles from address $0 in S ROM
+    move.w  #$6000,d0                       ; tiles from address $0 in S ROM
     nop
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
     move.w  d1,REG_VRAMRW                   ; write copyright sign or blank, depending on ListMode
-    move.w  #$0020,REG_VRAMRW               ; write space
+    move.w  #$6020,REG_VRAMRW               ; write space
 .writeStr_Info:
     move.b  (a0)+,d0                        ; Load D0's lower byte
     tst.b   d0 
@@ -200,7 +200,7 @@ updateGameInfo:
     move.b  (a0)+,d0                        ; Load D0's lower byte
     tst.b   d0 
     beq.w   .write_Megs_complete
-    or.w    #$2000,d0                       ; change palette
+    or.w    #$7000,d0                       ; change palette
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
     dbra    d1,.write_Megs                  ; Jump back to .write_Megs until all 3 chars are written
@@ -217,7 +217,7 @@ updateGameInfo:
     move.b  (a0)+,d0                        ; Load D0's lower byte
     tst.b   d0 
     beq.w   .writeStr_Megs_complete
-    or.w    #$2000,d0                       ; change palette
+    or.w    #$7000,d0                       ; change palette
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
     bra    .writeStr_Megs                   ; Jump back to .writeStr_Megs until all chars are written and 0 occured
@@ -241,6 +241,7 @@ updateIndex:
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
 .writeStr_Index:
     move.b  (a0)+,d0                        ; put char in d0, auto-increment a0 for next char
+    or.w    #$6000,d0                       ; change palette
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
     dbra    d2,.writeStr_Index              ; Jump back to .writeStr_Page until all 2 chars are written
@@ -258,7 +259,6 @@ renderList:
     lea     Gameslist,a0                    ; Load the text's address in A0
     mulu.w  #(LineLength*EntriesPerPage),d5 ; calculate the offset: linelen*items*currentPage
     add.w   d5,a0                           ; add the result to the gamelist-start offset
-    bra.w   .writeListEntry                 ; skip loading jap titles because region is NOT 0
 .writeListEntry:
     ; Render upper half: ---
     move.w  d6,REG_VRAMADDR                 ; Set the text position (address in fix map) #FIXMAP+(Y+2+((X+1)*32))
@@ -271,8 +271,11 @@ renderList:
     move.b  (a0)+,d0                        ; Load D0's lower byte
     cmp.b   d4,d2                           ; compare to RAM_CurrentListPosR to highlight menu item
     beq.w   .skipPaletteChangeUpper
-    or.w    #$1000,d0
+    or.w    #$6000,d0
+    bra     .keepPaletteUpper
 .skipPaletteChangeUpper:
+    or.w    #$5000,d0                       ; change palette
+.keepPaletteUpper:
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
     dbra    d1,.writeupper                  ; Jump back to .writeupper until all 32 chars are written
@@ -289,8 +292,11 @@ renderList:
     move.b  (a0)+,d0                        ; Load D0's lower byte
     cmp.b   d4,d2                           ; compare to RAM_CurrentListPosR to highlight menu item
     beq.w   .skipPaletteChangeLower
-    or.w    #$1000,d0
+    or.w    #$6000,d0
+    bra     .keepPaletteLower
 .skipPaletteChangeLower:
+    or.w    #$5000,d0                       ; change palette
+.keepPaletteLower:
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
     dbra    d1,.writelower                  ; Jump back to .writelower until all 32 chars are written
