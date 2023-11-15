@@ -32,6 +32,9 @@ CYAN            equ $30FF
 ORANGE          equ $6F70
 MIDGREY         equ $7777
 WHITE           equ $7FFF
+;Unibios colors:
+GOLDEN          equ $0A96
+PURPLE          equ $0402
 
 ;Zones:
 RAMSTART        equ $100000                 ; 68k work RAM

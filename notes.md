@@ -83,8 +83,16 @@ If you need and interested in this functionality, you will need to do a few thin
 
 ---
 
-# Unibios 4.0
+# UNIBIOS COLORS
 
-Disable bios integrity check:
-
-0x11C62: 66 00 00 E2 -> 4E 71 4E 71 (nop nop)
+| Color | P.RAM   | Intstuction | P.No. | Col.Idx. |
+| :---- | :------ | :---------- | :---: | :------: |
+| $0EEE | $400022 | PC=00C097A4 |   1   |    1     |
+| $0111 | $400024 | PC=00C09780 |   1   |    1     |
+| $0A96 | $400042 | PC=00C097B2 |   2   |    2     |
+| $0111 | $400044 | PC=00C09784 |   2   |    2     |
+| $0402 | $400062 | PC=00C09772 |   3   |    3     |
+| $0111 | $400064 | PC=00C09788 |   3   |    3     |
+| $0555 | $400082 | PC=00C09798 |   4   |    4     |
+| $0111 | $400084 | PC=00C0978C |   4   |    4     |
+| $0100 | $40008A | PC=00C097B6 |   4   |    4     |
