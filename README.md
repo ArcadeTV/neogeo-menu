@@ -1,10 +1,11 @@
-```
+# MENU FOR NEO GEO 161in1 MULTICART
+
+```text
  _____               _     _____ _____ 
 |  _  |___ ___ ___ _| |___|_   _|  |  |
 |     |  _|  _| .'| . | -_| | | |  |  |
 |__|__|_| |___|__,|___|___| |_|  \___/ 
 ```
-# MENU FOR NEO GEO 161in1 MULTICART 
 
 ![Menu Screenshot](https://raw.githubusercontent.com/ArcadeTV/neogeo-menu/main/gfx/menu.png)
 
@@ -20,9 +21,20 @@ Please see this [flowchart](https://raw.githubusercontent.com/ArcadeTV/neogeo-me
 
 ---
 
+## Configuration Options
+
+You can change the settings in `config.asm` to fit your needs.
+
+| Name  | Description                                                                    |
+| :---- | :----------------------------------------------------------------------------- |
+| THEME | Changes the colors used in the palettes<br>0: NEOGEO Style<br>1: UNIBIOS Style |
+
+---
+
 ## Building
 
 **Requirements:**
+
 - Windows x64
 - All files from this repository incl. the `_tools` folder
 - A gameslist.asm file (see details below)
@@ -36,14 +48,14 @@ When everything works as expected you'll find the roms ready for the modded 161i
 
 Although this was made to be used on real hardware, you can run it in MAME:
 
-### The easy way:
+### The easy way
 
-1. Add a MAME executable to the MAME folder 
-2. Add a bios (neogeo.zip) to MAME/roms 
+1. Add a MAME executable to the MAME folder
+2. Add a bios (neogeo.zip) to MAME/roms
 3. Run `build.bat`
 4. Run `emu.bat` or `debug.bat` to launch MAME
 
-### In your own MAME folder:
+### In your own MAME folder
 
 1. Run `build.bat`
 2. Open `MAME\hash\neogeo.xml` from this repository in any text editor and copy the element `<software name="menu">` till `</software>` into the `neogeo.xml` from your MAME folder.
@@ -86,4 +98,3 @@ _This is not about any "Master List" or Homebrew-Conversions - it's a cart with 
 | List Entry | 32             |
 |  Game Info | 22             |
 |       Megs | 3              |
-
