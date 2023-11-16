@@ -1,3 +1,10 @@
+    if THEME=0
+LINETILE set $954F
+    endif
+    if THEME=1
+LINETILE set $955B
+    endif
+
 renderGUI:
 
 ; WRITE LINES -------------------------------
@@ -6,7 +13,7 @@ renderGUI:
     move.l  #POS_LINE_TOP,d6                ; start position in fix map for upper line
     move.w  d6,REG_VRAMADDR                 ; Set the position (address in fix map)
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
-    move.w  #$554F,d0                       ; set line tile $54F in D0
+    move.w  #LINETILE,d0                    ; set line tile $54F in D0
 .writeUpperLine:
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...
@@ -16,7 +23,7 @@ renderGUI:
     move.l  #POS_LINE_BOTTOM,d6             ; start position in fix map for upper line
     move.w  d6,REG_VRAMADDR                 ; Set the position (address in fix map)
     move.w  #32,REG_VRAMMOD                 ; Set the VRAM address auto-increment value
-    move.w  #$554F,d0                       ; set line tile $54F in D0
+    move.w  #LINETILE,d0                    ; set line tile $54F in D0
 .writeLowerLine:
     move.w  d0,REG_VRAMRW                   ; Write to VRAM
     nop                                     ; Wait a bit...

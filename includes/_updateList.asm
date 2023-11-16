@@ -44,7 +44,7 @@ saveListValues:
 removeArrows:
 ; REMOVE ALL ARROWS -------------------------------
     clr.l   d1
-    move.b  #(EntriesPerPage*2+(EntriesPerPage-1))-1,d1            ; set counter for loop
+    move.b  #(EntriesPerPage*3-2),d1        ; set counter for loop: (EntriesPerPage * 2 + (EntriesPerPage-1))-1
     move.l  #ARROW_FIXSTART,d6              ; start position in fix map for upper arrow
     move.w  #1,REG_VRAMMOD                  ; Set the VRAM address auto-increment value
 .doKillArrows:

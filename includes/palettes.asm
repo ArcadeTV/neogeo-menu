@@ -16,7 +16,12 @@ PALETTE_NO set 6*32
 PALETTE_NO set 7*32
 
     move.w      #BLACK,PALETTES+(PALETTE_NO)    ; Transparency, color 0 of palette 0 must always be black anyways
+    if THEME=0
     move.w      #RED,PALETTES+(PALETTE_NO)+2    ; Text color
+    endif
+    if THEME=1
+    move.w      #GOLDEN,PALETTES+(PALETTE_NO)+2 ; Text color
+    endif
     move.w      #BLACK,PALETTES+(PALETTE_NO)+4  ; Background
 
     ; PALETTE #3 ---------------------------    $400060: Credits Screen
@@ -38,3 +43,15 @@ PALETTE_NO set 8*32
     move.w      #$5F0F,PALETTES+(PALETTE_NO)+26
     move.w      #$5F0F,PALETTES+(PALETTE_NO)+28
     move.w      #$5F0F,PALETTES+(PALETTE_NO)+30
+
+    ; PALETTE #4 ----------------------------   $400080: Purple
+PALETTE_NO set 9*32
+
+    move.w      #BLACK,PALETTES+(PALETTE_NO)    ; Transparency, color 0 of palette 0 must always be black anyways
+    if THEME=0
+    move.w      #WHITE,PALETTES+(PALETTE_NO)+2 ; Text color
+    endif
+    if THEME=1
+    move.w      #PURPLE,PALETTES+(PALETTE_NO)+2 ; Text color
+    endif
+    move.w      #BLACK,PALETTES+(PALETTE_NO)+4  ; Background

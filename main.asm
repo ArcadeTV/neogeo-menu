@@ -5,9 +5,10 @@
 ;
 ; ArcadeTV
 ; // Created: 2023/10/13 09:41:53
-; // Last modified: 2023/11/04 14:38:18
+; // Last modified: 2023/11/16 08:53:16
 ; ############################################################################################################
 
+    INCLUDE "config.asm"
     INCLUDE "includes/regdefs.asm"
     INCLUDE "includes/header.asm"
     INCLUDE "includes/vars.asm"

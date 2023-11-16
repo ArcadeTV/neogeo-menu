@@ -8,7 +8,7 @@ CurrentIndex            equ 0
 CurrentListPos          equ 0
 CurrentListPosR         equ EntriesPerPage-1
 GamesCount              equ (GameslistEnd-Gameslist)/32                     ; No of Games in list
-TotalPages              equ (GamesCount + EntriesPerPage-1)/EntriesPerPage  ; No of pages
+TotalPages              equ (GamesCount+EntriesPerPage-1)/EntriesPerPage    ; No of pages
 TotalListCount          equ EntriesPerPage*TotalPages                       ; No of "slots" in list
 ListOverhead            equ TotalListCount-GamesCount                       ; No of empty "slots" in list
 PageCharsCount          equ EntriesPerPage*LineLength                       ; No of chars on a full page
