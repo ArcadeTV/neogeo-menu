@@ -3,8 +3,8 @@
 ;
 ; ArcadeTV
 ; // Created: 2023/11/16 09:02:56
-; // Last modified: 2023/11/16 09:20:52
+; // Last modified: 2023/11/16 10:16:42
 ; ############################################################################################################
 
-THEME set 1                                 ; 0: NEO GEO Style
+THEME set 0                                 ; 0: NEO GEO Style
                                             ; 1: UNIBIOS Style
