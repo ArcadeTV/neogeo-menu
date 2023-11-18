@@ -5,7 +5,7 @@ REM ----------------------------------------------------------------------------
 REM NG_MENU // build.bat
 REM ArcadeTV
 REM // Created: 2023/10/13 10:19:32
-REM // Last modified: 2023/11/13 12:55:43
+REM // Last modified: 2023/11/18 15:07:19
 REM -------------------------------------------------------------------------------------------------
 
 CLS
@@ -24,22 +24,9 @@ if not exist ".\gameslist.asm" exit /b
 
 
 REM -----------------------------------------------------------------------------------------------
-REM Set date vars
-
-for /f "tokens=2 delims==" %%a in ('wmic OS Get localdatetime /value') do set "dt=%%a"
-set "YY=%dt:~2,2%" & set "YYYY=%dt:~0,4%" & set "MM=%dt:~4,2%" & set "DD=%dt:~6,2%"
-set "HH=%dt:~8,2%" & set "Min=%dt:~10,2%" & set "Sec=%dt:~12,2%"
-
-set "datestamp=%YYYY%%MM%%DD%" & set "timestamp=%HH%%Min%%Sec%"
-set "fullstamp=%YYYY%%MM%%DD%-%HH%%Min%%Sec%"
-echo timestamp: "%fullstamp%">.\tmp\build.log
-
-
-REM -----------------------------------------------------------------------------------------------
 REM Prepare file-related vars
 
 set TARGETMBIT=%PADTO%
-set VERSION=%date:/=.%
 set /a "NEWSIZE=%TARGETMBIT%*128*1024"
 
 
@@ -63,6 +50,7 @@ if exist ".\MAME\roms\menu\%OUTFILE%" (
 REM -----------------------------------------------------------------------------------------------
 REM create version file
 
+for /f "delims=" %%i in ('.\_tools\date.exe') do set "VERSION=%%i"
 echo     dc.b " -  ArcadeTV  - ">.\version.asm
 echo     dc.b " - %VERSION% - ">>.\version.asm
 echo Set version to %VERSION%>>.\tmp\build.log
