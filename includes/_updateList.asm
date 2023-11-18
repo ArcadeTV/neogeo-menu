@@ -254,6 +254,7 @@ renderList:
     move.b  (RAM_CurrentListPos),d3         ; get current list position (where the arrow is drawn) in d3
     move.b  (RAM_CurrentListPosR),d4        ; get current list position (where the arrow is drawn) in d3
     move.l  #(EntriesPerPage-1),d2          ; init d2 for rows-count
+    move.l  #0,d5                           ; clear d5
     move.b  (RAM_CurrentPage),d5            ; get current page value from RAM
     move.l  #POS_LIST,d6                    ; initial upper left position in fix map
     lea     Gameslist,a0                    ; Load the text's address in A0

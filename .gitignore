@@ -28,6 +28,9 @@ gameslist.asm
 !/MAME/roms/menu/menu-v1.bin
 !/MAME/roms/menu/menu-v2.bin
 /MAME/roms/neogeo
+/MAME/roms/aes
+/MAME/roms/neogeo.zip
+/MAME/roms/aes.zip
 /MAME/*.bdf
 /MAME/*.exe
 /MAME/*.log

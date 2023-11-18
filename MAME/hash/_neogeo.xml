@@ -8,8 +8,8 @@
         <info name="serial" value="NGM-161 (MVS)"/>
         <info name="release" value="20231011 (MVS)"/>
         <info name="alt_title" value="Menu"/>
-        <sharedfeat name="release" value="MVS" />
-        <sharedfeat name="compatibility" value="MVS" />
+        <sharedfeat name="release" value="MVS,AES" />
+        <sharedfeat name="compatibility" value="MVS,AES" />
         <part name="cart" interface="neo_cart">
             <dataarea name="maincpu" width="16" endianness="big" size="0x100000">
                 <rom loadflag="load16_word_swap" name="menu-p1.bin" offset="0x000000" size="%size%" crc="%crc%" sha1="%sha%" />   <!-- MB834200 -->
