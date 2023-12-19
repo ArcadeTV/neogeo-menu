@@ -12,8 +12,6 @@
 
 This aims to bring back a "Back To Menu" option for the custom 161in1 cart based on the work of VORTEX.
 
-**Important** Due to a protection any edited version of the Unibios will crash at some point. There are already efforts to bring this feature to the CPLD on the cart.
-
 ---
 
 ## Patching
@@ -32,6 +30,14 @@ This aims to bring back a "Back To Menu" option for the custom 161in1 cart based
 
     org         $1BBC6                          ; bypass soft reset
     jmp         freeSpace+$C00000
+
+    org         $1E386                          ; bypass protection crash
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
 
     org         $1FFA0                          ; 96 Bytes free
 freeSpace:
