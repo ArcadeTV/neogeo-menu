@@ -31,13 +31,8 @@ This aims to bring back a "Back To Menu" option for the custom 161in1 cart based
     org         $1BBC6                          ; bypass soft reset
     jmp         freeSpace+$C00000
 
-    org         $1E386                          ; bypass protection crash
-    nop
-    nop
-    nop
-    nop
-    nop
-    nop
+    org         $1E9E8                          ; bypass protection crash
+    bra.b       $54                             ; replace beq.b by bra.b
 
     org         $1FFA0                          ; 96 Bytes free
 freeSpace:
